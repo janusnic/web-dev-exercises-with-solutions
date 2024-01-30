@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+
+  <title>Intrinsic - Test...</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  
+<style>
+.wrapper {
+  max-width: 1000px;
+  padding: 0 1rem;
+  margin: 1rem auto;
+}
+.wrapper h2 {
+  color: #1e9ada;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.wrapper p {
+  color: #616161;
+}
+
+section {
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+section h2 {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+/*****************************/
+body {
+  background: #fafafa;
+  line-height: 1.5;
+  font-family: "Arial";
+}
+
+* {
+  box-sizing: border-box;
+}
+</style>
+  
+</head>
+<!-- Цей текст не буде виходити за ширину заголовка -->
+<body translate="no">
+  <div class="wrapper">
+  <section>
+    <h2>CSS is cool and awesome. Isn't it?</h2>
+    <p>This text won't go beyond the title width</p>
+  </section>
+  
+  <section>
+    <h2>CSS is cool</h2>
+    <p>This text won't go beyond the title width.</p>
+  </section>
+  
+  <section>
+    <h2>CSS is cool and awesome</h2>
+    <p>This text won't go beyond the title width.. Do you want a proof? Here you go.</p>
+  </section>
+</div>
+
+</body>
+
+</html>

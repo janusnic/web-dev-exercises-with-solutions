@@ -5,24 +5,102 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <!-- change the title to: Lesson 2 challenges -->
     <title>Document</title>
+    <style>
+        .positioned {
+        position: sticky;
+        top: 30px;
+        left: 30px;
+        }
+
+        dt {
+            background-color: black;
+            color: white;
+            padding: 10px;
+            position: sticky;
+            top: 0;
+            left: 0;
+            margin: 1em 0;
+        }
+
+
+        div {
+            background-color: #fff29c;
+            border: 3px solid #301551;
+            color: #301551;
+            padding: 10px;
+            }
+
+        img {
+            float: right;
+            width: 60%;
+            margin-left: 5px;
+        }
+
+        div {
+        background-color: #fff29c;
+        border: 3px solid #301551;
+        color: #301551;
+        padding: 10px;
+        }
+
+        div::after {
+        content: "";
+        display: block;
+        clear: both;
+        }
+
+        img {
+        float: right;
+        width: 60%;
+        margin-left: 5px;
+        }
+
+        div {
+        background-color: #fff29c;
+        border: 3px solid #301551;
+        color: #301551;
+        padding: 10px;
+        overflow: auto;
+        }
+
+        img {
+        float: right;
+        width: 60%;
+        margin-left: 5px;
+        }
+
+    </style>
 </head>
 <body>
-    <h2>Hello there!</h2>
-    <!-- Enter your code below this line-->
-    <!-- Add a subheading to Annie's wiki named, About Programming -->
-    <h2>About Programming</h2>
-    <!-- Enter your code above this line-->
-    <!-- Add a another subheading with a name, About HTML -->
-    <h3>About HTML</h3>
-    <!-- Enter your code above this line-->
-    <!-- Add a subheading below the subheading: About Programming named, About CSS -->
-    <h3>About CSS</h3>
-    <!-- Enter your code above this line-->
+    <h1>Sticky positioning</h1>
+    <dl>
+        <dt>A</dt>
+            <dd>Apple</dd>
+            <dd>Ant</dd>
+            <dd>Altimeter</dd>
+            <dd>Airplane</dd>
+        <dt>B</dt>
+            <dd>Bird</dd>
+            <dd>Buzzard</dd>
+            <dd>Bee</dd>
+            <dd>Banana</dd>
+            <dd>Beanstalk</dd>
+        <dt>C</dt>
+            <dd>Calculator</dd>
+            <dd>Cane</dd>
+            <dd>Camera</dd>
+            <dd>Camel</dd>
+        <dt>D</dt>
+            <dd>Duck</dd>
+            <dd>Dime</dd>
+            <dd>Dipstick</dd>
+            <dd>Drone</dd>
+        <dt>E</dt>
+            <dd>Egg</dd>
+            <dd>Elephant</dd>
+            <dd>Egret</dd>
+    </dl>
 
-    <div>
-        <h1>This is a heading.</h1>
-    </div>
-    Тут <h1> є нащадком <div>.
      
 </body>
 </html>

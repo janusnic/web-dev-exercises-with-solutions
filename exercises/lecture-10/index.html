@@ -5,24 +5,127 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <!-- change the title to: Lesson 2 challenges -->
     <title>Document</title>
+    <style>
+        .wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            width: 700px;
+        }
+
+        .item-blue {
+            background-color: blue;
+            flex-grow: 3;
+        }
+        .item-orange {
+            background-color:orange;  
+        }
+        .item-green {
+            background-color:green;
+            flex-grow: 1;
+        }
+
+        .item {
+            color: white;
+            width: 100px;
+            /* flex-grow: 1; */
+        }
+
+
+        /* header */
+
+        *,
+        *:before,
+        *:after {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #222;
+        }
+
+        .wrapper-div {
+            max-width: 1140px;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .brand {
+            font-weight: bold;
+            font-size: 20px; 
+        }
+
+        .site-header {
+            background-color: #def7ff; 
+            
+        }
+
+        .nav__item a {
+            display: block;
+            padding: 1.5rem 1rem; 
+        }
+
+
+        .site-header__wrapper {
+            padding-top: 0;
+            padding-bottom: 0; 
+            /* display: flex;
+            justify-content: space-between;
+            align-items: center; */
+        }
+
+        .nav__wrapper {
+            /* display: flex;  */
+            list-style: none;
+        }
+
+        .grid-container {
+            display: grid;  
+            grid-template-columns: 1fr 1fr 1fr 1fr; /* эквивалентно grid-template-columns: 25% 25% 25% 25%; */
+        }
+        .grid-container {
+            display: grid;  
+            grid-template-columns: 1fr 2fr 1fr; /* эквивалентно grid-template-columns: 25% 50% 25%; */
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-rows: 200px minmax(100px, 1fr);
+        }
+
+
+    </style>
 </head>
 <body>
-    <h2>Hello there!</h2>
-    <!-- Enter your code below this line-->
-    <!-- Add a subheading to Annie's wiki named, About Programming -->
-    <h2>About Programming</h2>
-    <!-- Enter your code above this line-->
-    <!-- Add a another subheading with a name, About HTML -->
-    <h3>About HTML</h3>
-    <!-- Enter your code above this line-->
-    <!-- Add a subheading below the subheading: About Programming named, About CSS -->
-    <h3>About CSS</h3>
-    <!-- Enter your code above this line-->
-
-    <div>
-        <h1>This is a heading.</h1>
+    <!-- Header Start -->
+    <header class="site-header">
+        <div class="wrapper-div site-header__wrapper">
+          <a href="#" class="brand">Brand</a>
+          <nav class="nav">
+            <ul class="nav__wrapper">
+              <li class="nav__item"><a href="#">Home</a></li>
+              <li class="nav__item"><a href="#">About</a></li>
+              <li class="nav__item"><a href="#">Services</a></li>
+              <li class="nav__item"><a href="#">Hire us</a></li>
+              <li class="nav__item"><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+    </header>
+    <!-- Header End -->
+    
+    <h2>CSS Flex Property</h2>
+    <div class="wrapper">
+        <div class="item item-blue">CSS</div>
+        <div class="item item-orange">Flex</div>
+        <div class="item item-green">Property</div>
     </div>
-    Тут <h1> є нащадком <div>.
      
 </body>
 </html>

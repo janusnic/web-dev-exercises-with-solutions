@@ -115,6 +115,11 @@ li:first-child {
 ul :first-of-type {
    color: orange;
 }
+
+li:first-of-type + li {
+   color: #00d42a;
+}
+
 ```
 6. Додайте до сторінки exercises/lecture-06/index.html наступну розмітку 
 ```html 

@@ -1,0 +1,124 @@
+.img1{
+    width: 300px;
+}
+.test {
+    /* One-value syntax the width of the image (height becomes 'auto') */
+    background-size: 50%;
+    background-size: 3.2em;
+    background-size: 12px;
+    background-size: auto;
+
+    /* Two-value syntax first value: width of the image, second value: height */
+    background-size: 50% auto;
+    background-size: 3em 25%;
+    background-size: auto 6px;
+    background-size: auto auto;
+}
+
+.myclass {
+    /* Multiple backgrounds */
+    background-size: auto, auto; /* Not to be confused with `auto auto` */
+    background-size: 50%, 25%, 25%;
+    background-size: 6px, auto, contain;
+
+    background: radial-gradient(#e66465, #9198e5);
+    background: radial-gradient(closest-side, #3f87a6, #ebf8e1, #f69d3c);
+    background: radial-gradient(circle at 100%, #333, #333 50%, #eee 75%, #333 75%);
+    background: radial-gradient(ellipse at top, #e66465, transparent),
+                radial-gradient(ellipse at bottom, #4d9f0c, transparent);
+
+}
+
+body {
+	/* background:linear-gradient(whitesmoke, gainsboro); */
+}
+		
+.center-div	{
+	text-align:center;
+    padding:30px;
+    background:linear-gradient(whitesmoke, gainsboro);
+}
+
+.gradient-button {
+	line-height:60px;
+    color:white;	
+    font-size:30px;
+    font-weight:bold;
+    font-family:sans-serif;
+	
+    background-image:linear-gradient(coral, orangered, firebrick, orangered);
+	background-size:100% 300%; /* three states effect is 300% */
+	background-position:0 50%;	/* normal state */
+}
+
+.gradient-button:hover {
+	background-position:0 0; /* hover state */
+}
+
+.gradient-button:active {
+	background-position:0 100%;	/* active state */
+}
+
+h1 {
+    font-size: 8vw;
+    font-family: sans-serif;
+    font-weight: bold;
+    background: -webkit-gradient(linear, left top, right top, 
+        from(rgb(25, 76, 192)), 
+        color-stop(20%, rgb(196, 26, 3)), 
+        color-stop(40%, rgb(236, 190, 6)), 
+        color-stop(60%, rgb(25, 76, 192)), 
+        color-stop(80%, rgb(3, 116, 8)), 
+        to(rgb(196, 26, 3)));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* .pixels {
+    background: linear-gradient(to right, yellowgreen 5%, rgb(30, 205, 5) 17%, rgb(0, 155, 85) 40%, #025a1ff1 85%);
+ } */
+
+.body {background-image: linear-gradient(to bottom,
+    rgb(0, 225, 0) 5%, rgb(30, 205, 5) 17%, rgb(0, 155, 85) 40%, rgb(2, 55, 1) 85%, #025a1ff1 95%);
+    
+ /* background: -webkit-gradient(linear, left top, right top, 
+ from(rgb(0, 255, 0)), 
+ color-stop(5%, rgb(0, 225, 0)), 
+ color-stop(17%, rgb(30, 205, 5)), 
+ color-stop(40%, rgb(0, 155, 85)), 
+ color-stop(85%, rgb(2, 55, 1)), 
+ to(#025a1ff1)); */
+} 
+
+/* .negative { background: linear-gradient(to right, rgb(167, 235, 135) -50%, #025a1ff1 150%);} */
+ 
+.negative { 
+    background: linear-gradient(
+        to right, 
+        rgb(0, 200, 255) -50%, 
+        rgb(0, 150, 255) -10%,
+        rgb(0, 100, 255) -0%,
+        rgb(0, 20, 200) 100%,
+        rgb(0, 2, 100) 150%
+        );
+    }
+
+ /* Смугастий фон: */
+ .percents {
+    background: linear-gradient(to right, rgba(0, 64, 9, 0.89) 2em, #025a1ff1 3em, rgb(6, 162, 79) 7em, rgba(60, 200, 70, 0.89) 12em, rgba(0, 64, 9, 0.89) 22em, #025a1ff1 31em, rgb(6, 162, 79) 47em, rgba(60, 200, 70, 0.89) 52em);
+ }
+ 
+.radial{
+    background: radial-gradient(ellipse at top, #e66465, transparent),
+    radial-gradient(ellipse at bottom, #4d9f0c, transparent);
+}
+ 
+
+.svg-icon {
+    width: 64px;
+    height: 64px;
+    vertical-align: text-bottom;
+    stroke: white;
+    stroke-width: 3;
+}

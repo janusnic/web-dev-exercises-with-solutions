@@ -8,6 +8,17 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto::wght@400;700&display=swap" rel="stylesheet">
     
     <link href="css/main.css" rel="stylesheet">
+
+    <style>
+
+        ul.first-last :first-of-type {
+            color: orange;
+        }
+
+        li:first-of-type + li {
+        color: #00d42a;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -48,6 +59,12 @@
     <p class="icon-fa">
         Веб-шрифти можна використовувати для вставки графічних піктограм через створений вміст. Залежно від сімейства веб-шрифтів, ви можете вставити або прості літери, або послідовності Unicode
     </p>
+
+    <ul class="first-last">
+        <li>This text will be orange.</li>
+        <li>Lorem ipsum dolor sit amet. <span>This text will be orange.</span></li>
+        <li>Lorem ipsum dolor sit amet.</li>
+     </ul>
 
     <footer>
         <!-- Footer main -->
