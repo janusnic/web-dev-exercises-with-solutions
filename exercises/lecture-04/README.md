@@ -224,9 +224,9 @@ h1, h2, h3 {
 ```
 
 6. Використовцючи hsl, створіть для класу translucent-box напівпрозору властивість background з такими значеннями
-	- Hue = 
-	- Saturate = 
-	- Lightness = 
+	- Hue = 0deg
+	- Saturate =  100%
+	- Lightness =  50%
 
 	- Додати розмітку
 ```html

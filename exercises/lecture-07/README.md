@@ -84,21 +84,20 @@ HTML/CSS/JavaScript/ReactJS practice exercises with solutions
 }
 </style>
 ```
-2. SVG
-    - Стаорити svg-прямокутник розміром 100х100 з координатами 20,20 20, 20. Для обрамлення встановити колір #1c87c9 та товщину лінії 4. Встановити фон прямокутника lightgray.
+2. Стаорити svg-прямокутник розміром 100х100 з координатами 20,20 20, 20. Для обрамлення встановити колір #1c87c9 та товщину лінії 4. Встановити фон прямокутника lightgray.
 ```html
 <svg width="180" height="180">
     <rect x="20" y="20" rx="20" ry="20" width="100" height="100" style="fill:lightgray; stroke:#1c87c9; stroke-width:4;"/>
 </svg>
 ```
-    - Стаорити svg-коло розміром 200х200 радіусом = 60 та центром з координатами 100, 70. Для обрамлення встановити червоний колір та товщину лінії 4. Встановити фон кола lightgray.
+3. Стаорити svg-коло розміром 200х200 радіусом = 60 та центром з координатами 100, 70. Для обрамлення встановити червоний колір та товщину лінії 4. Встановити фон кола lightgray.
 ```html
 <svg width="200" height="200">
     <circle cx="100" cy="70" r="60" stroke="red" stroke-width="4" fill="lightgray"/>
 </svg>
 ```
 
-    - Створити svg-малюнок годинника, що показує час = 3 години
+4. Створити svg-малюнок годинника, що показує час = 3 години
 ```html
 <svg width="100" height="100" fill="red" stroke="white" stroke-width="4">
     <circle cx="50" cy="50" r="40"></circle>
@@ -106,7 +105,7 @@ HTML/CSS/JavaScript/ReactJS practice exercises with solutions
 </svg>
 ```
 
-    - Створити svg-малюнок зірки
+5. Створити svg-малюнок зірки
 ```html
 <svg width="200" height="200">
     <polygon points="100,10 40,198 190,78 10,78 160,198" style="fill:lightgray; stroke:#1c87c9; stroke-width:4; fill-rule:evenodd;"/>

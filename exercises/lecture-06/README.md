@@ -345,4 +345,3 @@ ul.categories li a:hover {
 ## LICENSE
 This repository follows the [MIT License](https://github.com/janusnic/web-dev-exercises-with-solutions/tree/main/LICENSE).
 
-

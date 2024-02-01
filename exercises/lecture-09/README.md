@@ -466,6 +466,187 @@ In the above example, we can see that the box has the overflow-property set to b
 У наведеному вище прикладі ми бачимо, що вікно має властивість переповнення, встановлену на break-word, яка розриває довгий рядок символів і переносить їх на наступний рядок, гарантуючи, що наш вміст не переповнюється з контейнера. Однак, якщо ми не вкажемо властивість, довгі слова не розіб’ються, і вони переповнять контейнер.
 
 
+Що таке скорочення тексту?
+У CSS скорочення тексту використовується для скорочення тексту, який переповнює контейнер, приховуючи зайвий вміст і замінюючи його еліпсами. Цей прийом корисний для створення більш компактних і візуально привабливих макетів у ситуаціях, коли довжина тексту може змінюватися, наприклад у навігаційних меню, клітинках таблиць або заголовках.
+
+Властивість CSS, яку ви використовуєте для скорочення тексту, це text-overflow. Щоб увімкнути скорочення тексту, вам потрібно встановити для властивості text-overflow значення «ellipsis», а для властивості пробілу — значення nowrap, щоб запобігти переносу тексту на наступний рядок. Вам також може знадобитися встановити для властивості переповнення значення "hidden", щоб приховати будь-який текст, який переповнює контейнер.
+
+Давайте зараз обговоримо ці властивості докладніше.
+
+Властивості CSS для скорочення тексту
+Для скорочення тексту можна використовувати різні властивості CSS. Нижче наведено деякі з найпоширеніших властивостей CSS:
+
+text-overflow : ця властивість визначає, як має відображатися текстовий вміст, коли він переповнює область вмісту елемента. Властивість text-overflow може приймати одне з таких значень:
+
+кліп: якщо текст виходить за межі області вмісту елемента, він вирізається та не відображається.
+крапка: якщо текст перевищує область вмісту елемента, він скорочується, а в кінці вставляється крапка (...).
+згасання: якщо текст перевищує область вмісту елемента, він скорочується, а в кінці додається ефект зникнення.
+пробіл: ця властивість керує тим, як обробляються пробіли в тексті. Атрибут white-space має такі можливі властивості:
+
+звичайний: браузер розриває рядки тексту, щоб вони помістилися в межах доступного простору.
+nowrap: браузер не розриватиме рядки тексту, що може спричинити переповнення текстом області вмісту елемента.
+pre: Браузер зберігатиме пробіли, через що текст може переповнювати область вмісту елемента.
+переповнення: ця властивість визначає, як слід обробляти переповнений вміст. Властивість переповнення може приймати одне з наступних значень:
+
+видимий: переповнений вміст видимий і не обрізаний.
+приховано: переповнений вміст прихований і невидимий.
+прокручування: видимий переповнений вміст, додано смуги прокручування, щоб увімкнути прокручування.
+auto: переповнений вміст видно, а смуги прокрутки додаються до елемента, лише якщо вміст переповнюється.
+Щоб скоротити текст, ви можете використовувати властивість text-overflow у поєднанні з властивостями white-space і overflow. для
+
+Динамічне скорочення
+Ви також можете реалізувати динамічне скорочення за допомогою CSS для відображення текстового вмісту на веб-сторінці. Одним із поширених випадків використання динамічного скорочення за допомогою CSS є обмеження обсягу тексту, який відображається в контейнері, одночасно надаючи посилання або кнопку «читати далі», щоб дозволити користувачам розширювати вміст.
+
+Ось приклад коду HTML і CSS, який реалізує динамічний CSS у скороченні тексту з рамкою навколо тексту, яка вказує на його ширину:
+
+The HTML code:
+
+<html>
+  <body>
+    <div class="list">
+      <div class="card">
+        <h3>First Example</h3>
+        <p class="text single-line">
+          mollis, ante non euismod ornare, orci diam ornare orci, eu mattis
+          tortor lectus at erat. Nam rutrum erat nec euismod lacinia. Curabitur
+          et velit ut mauris euismod tempus. Fusce pharetra augue lectus, quis
+          maximus quam auctor pellentesque.  
+        </p>
+      </div>
+      <div class="card">
+        <h3>Second Example header</h3>
+        <p class="text single-line">
+          Curabitur pharetra, erat a gravida malesuada, augue mi tincidunt odio,
+          quis rhoncus tortor metus ut purus. Nunc lectus quam, tempus sed
+          mollis id, feugiat a quam. Donec posuere nulla a lacus interdum
+          faucibus ut tincidunt nisi. 
+        </p>
+      </div>
+    </div>
+  </body>
+</html> <body>
+    <div class="list">
+        <div class="card">
+          <h3>First Example</h3>
+          <p class="text single-line">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam augue nulla, elementum non erat id, cursus feugiat sem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nullam velit neque, tincidunt in ipsum vel, accumsan mattis nisi. 
+          </p>
+        </div>
+            <div class="card">
+          <h3>Second Example header</h3>
+          <p class="text single-line">
+            Curabitur pharetra, erat a gravida malesuada, augue mi tincidunt odio, quis rhoncus tortor metus ut purus. Nunc lectus quam, tempus sed mollis id, feugiat a quam. Donec posuere nulla a lacus interdum faucibus ut tincidunt nisi. Curabitur consequat vitae turpis quis lobortis. 
+          </p>
+        </div>
+      </div>
+      
+</body>
+</html>
+
+Below is the HTML code output without adding the CSS:
+
+
+Here's the CSS code to truncate the overflowing text:
+
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  border: 1px solid #1948e3;
+  border-radius: 8px;
+  height: 100px;
+  margin: 0 auto;
+  padding: 15px 25px;
+  width: 890px;
+}
+
+.card:not(:last-of-type) {
+  margin-bottom: 20px;
+}
+
+.text.single-line {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+Як створити багаторядковий усічений текст
+Властивості CSS ефективно скорочують один рядок тексту або багаторядковий текст, що охоплює два або менше рядків. Але також можна досягти скорочення тексту для багаторядкового тексту за допомогою JavaScript.
+
+У наступних розділах ми розглянемо два способи скорочення багаторядкового тексту, один із яких використовує CSS, а інший — JavaScript. Вивчивши обидва підходи, ви зможете вирішити, яка техніка найкраще відповідає вашим потребам.
+
+Як використовувати CSS для скорочення багаторядкового тексту
+Властивості CSS добре працюють для однорядкового тексту та багаторядкового тексту, який охоплює більше двох рядків.
+
+Першим кроком є визначення висоти коробки або елемента. Далі ми множимо висоту рядка на кількість рядків, які ми хочемо проігнорувати перед усіканням, щоб отримати максимальну висоту.
+
+Ось як це робиться:
+
+<body>
+  <h3>Multi-line Text Truncation overflow!</h3>
+
+  <p class="truncate-overflow">
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. In sint facilis
+    explicabo voluptatum exercitationem earum. Quibusdam vitae, iusto temporibus
+    corrupti tempore distinctio soluta reiciendis. Ab aspernatur facilis autem
+    temporibus veniam.
+  </p>
+
+  <p class="truncate-overflow">
+    Multi-line text truncation is a common design pattern that allows designers to show a limited amount of text on a web page or application, while still giving users the ability to see more if they desire.
+  </p>
+
+  <p class="truncate-overflow">
+    In CSS, there are several ways to truncate multi-line text, including using the text-overflow property in combination with display, white-space, and overflow.
+  </p>
+</body>
+
+
+Now let's set the Overflow to hidden and the max-height to our preferred height, the same as the line-height.
+
+Then we have -webkit-box-orient set to vertical, -webkit-line-clamp, and text-overflow set to ellipsis. We'll also change the display to box:
+
+Тепер давайте встановимо переповнення на приховане, а максимальну висоту — бажану висоту, таку саму, як висота лінії.
+
+Тоді у нас є параметри -webkit-box-orient, встановлені як вертикальні, -webkit-line-clamp, а для text-overflow — три крапки. Ми також змінимо відображення на поле:
+
+
+:root {
+  --lh: 1.4rem;
+}
+
+html {
+  max-width: 22rem;
+  margin: 2rem auto;
+  line-height: var(--lh);
+}
+
+.truncate-overflow {
+  --max-lines: 3;
+  position: relative;
+  max-height: calc(var(--lh) * var(--max-lines));
+  overflow: hidden;
+  padding-right: 1rem;
+}
+
+.truncate-overflow::before {
+  position: absolute;
+  content: "...";
+  bottom: 0;
+  right: 0;
+}
+.truncate-overflow::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 1rem;
+  height: 1rem;
+  background: white;
+}
+
+
 2. Відредагуйте файл index.html домашньої сторінки
 ```html
 <!DOCTYPE html>
