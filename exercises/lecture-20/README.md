@@ -1,8 +1,8 @@
 # web-dev-exercises-with-solutions
 HTML/CSS/JavaScript/ReactJS practice exercises with solutions
-## Exercises for lecture №15 - Bootstrap
+## Exercises for lecture №20 - Array
 
-1. В середині exercises створіть піддирексторію lecture-15. В середині lecture-15 створіть файли index.html та README.md
+1. В середині exercises створіть піддирексторію lecture-20. В середині lecture-20 створіть файли index.html та README.md
 
 Відредагуйте файл index.html
 
@@ -13,18 +13,14 @@ HTML/CSS/JavaScript/ReactJS practice exercises with solutions
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- змініть title на: Моя домашня сторінка -->
     <title>Document</title>
-
-	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+	 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
 </head>
 <body>
     <h1>Hello, world!</h1>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-
+    <script src="main.js"></script>
 </body>
 </html>
 
@@ -32,225 +28,99 @@ HTML/CSS/JavaScript/ReactJS practice exercises with solutions
 2. Підключити Bootstrap-компонент navbar
 
 ```html
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Navbar</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-              </li>
-            </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-          </div>
-        </div>
-    </nav>
+
 ```
 
 3. Встановити клас bg-primary для компонента navbar. Встановити темну тему для компонента navbar
 
 ```html
-<nav class="navbar bg-primary" data-bs-theme="dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Dropdown
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                  </ul>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-                </li>
-              </ul>
-              <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-              </form>
-            </div>
-        </div>
-    </nav>
+
 ```
 
 4. Встановити клас bg-dark для компонента navbar. Встановити темну тему для компонента navbar 
 
 ```html
-<nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Dropdown
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                  </ul>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-                </li>
-              </ul>
-              <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-              </form>
-            </div>
-        </div>
-    </nav>
+
 ```
 
 5. Встановити style="background-color: #e3f2fd;" компонента navbar
 
 ```html
-<nav class="navbar" style="background-color: #e3f2fd;">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Dropdown
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                  </ul>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-                </li>
-              </ul>
-              <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-              </form>
-            </div>
-        </div>
-    </nav>
+
 ```
 6. Підключити на сторінку компонент accordion
 ```html
-<div class="accordion" id="accordionExample">
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-        Accordion Item #1
-      </button>
-    </h2>
-    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-        <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-      </div>
-    </div>
-  </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-        Accordion Item #2
-      </button>
-    </h2>
-    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-      </div>
-    </div>
-  </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-        Accordion Item #3
-      </button>
-    </h2>
-    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-      </div>
-    </div>
-  </div>
-</div>
+
 ```
 7. Підключити на сторінку компонент breadcrumb
 ```html
-<nav aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="#">Home</a></li>
-    <li class="breadcrumb-item"><a href="#">Library</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Data</li>
-  </ol>
-</nav>
+
 ```
 8. Створити та підключити на сторінку компонент Sticky footer
+
+Метод .sort() сортує дані за алфавітом і числом у порядку зростання або спадання. За замовчуванням .sort() сортує дані в алфавітному порядку за зростанням. Це означає, що «Audi» передує «BMW» (нічого нового, насправді). Крім того, типовим і єдиним типом даних для .sort() є рядок. Це означає, що він не сортуватиме числа чи об’єкти.
+
+const arr = ['BMW', 'Mercedes', 'Audi', 'Citroen', 'Ferrari'];
+ 
+arr.sort();
+ 
+console.log(arr);
+//Result:
+//['Audi', 'BMW', 'Citroen', 'Ferrari', 'Mercedes']
+
+Якщо ми надамо масив із числами, метод сортування JavaScript перетворить кожне число на рядок, тож ми можемо отримати досить несподівані результати.
+
+const arr = [128, 1, 333, 1000, 10, 100];
+ 
+arr.sort();
+//Result: 
+//[1, 10, 100, 1000, 128, 333]
+
+Як ми бачимо в наведеному вище прикладі, числа розташовані не в правильному очікуваному порядку. Це тому, що число перетворюється на UTF-16. Через це «1000» стоїть перед «100» у порядку Unicode.
+
+Як сортувати числа за допомогою методу сортування JavaScript
+Існує спосіб обійти цю проблему з числами. .sort() прийматиме функції порівняння. Це означає, що якщо ми надамо якусь функцію, яка буде порівнювати числа, числа не будуть перетворені на рядки.
+
+Функція порівняння приймає два параметри a і b (ми можемо називати їх як завгодно). Це два елементи з масиву (це робиться автоматично). Ця функція може повертати негативні, нульові або позитивні результати.
+
+const numbers = [4, 2, 5, 1, 3];
+numbers.sort(function(a, b) {
+  return a - b;
+});
+console.log(numbers);
+ 
+//Result:
+// [1, 2, 3, 4, 5]
+ 
+numbers.sort(function(a, b) {
+  return b-a;
+});
+console.log(numbers);
+ 
+//Result:
+// [5, 4, 3, 2, 1]
+ 
+ 
+numbers.sort(function(a, b) {
+  return b===a;
+});
+console.log(numbers);
+ 
+//Result:
+// [4, 2, 5, 1, 3]
+
+Як ми бачимо у прикладі вище, застосовуються наступні правила:
+
+якщо ми використовуємо такі функції, як function(a,b) { a - b }, масив буде відсортовано в порядку зростання.
+якщо ми використовуємо функцію типу function(a,b) { b - a }, масив буде відсортовано в порядку спадання.
+якщо ми використовуємо такі функції, як function(a,b) { a === b }, порядок масиву не зміниться (майте на увазі, що .sort() змінює вихідний масив).
+якщо ми використовуємо такі функції, як function(a,b) { b === a }, порядок масиву не зміниться.
+У нашому наступному тексті ми розглянемо, як упорядкувати деякі інші типи даних, такі як об’єкти.
+
+Якщо у вас є будь-які запитання або щось інше, ви можете знайти мене в моєму Twitter, або ви можете прочитати деякі з моїх інших статей, як-от SQL проти NoSQL. Практичне пояснення, ніби мені 5.
+
 ```html
 
-    <footer class="footer mt-auto py-3 bg-body-tertiary fixed-bottom">
-        <div class="container">
-          <span class="text-body-secondary">Place sticky footer content here.</span>
-        </div>
-    </footer>
 ```
 
 ## LICENSE

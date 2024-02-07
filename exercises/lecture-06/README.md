@@ -307,7 +307,7 @@ h1.hero::after {
 
 ```
 	- Відредагуйте файл css/main.css
-		- Визначити клас text-uppercase з властивістю   text-transform: uppercase;
+		- Визначити клас text-uppercase з властивістю text-transform: uppercase;
 		- Визначити клас bg-dark з властивістю background-color: black
 		- Визначити клас text-white з властивістю color: white
 		- Визначити селектор ul.categories li a з властивостями color: indigo, text-decoration: none, font-size: 1.2rem
@@ -340,8 +340,6 @@ ul.categories li a:hover {
 }
 
 ```
-
-
 ## LICENSE
 This repository follows the [MIT License](https://github.com/janusnic/web-dev-exercises-with-solutions/tree/main/LICENSE).
 

@@ -11,8 +11,7 @@ HTML/CSS/JavaScript/ReactJS practice exercises with solutions
 <!-- щоб додати шрифт «Roboto», тег посилання матиме такий вигляд: -->
 <head>
   <link rel='stylesheet' 
-  href='https://fonts.googleapis.com/css?family=Roboto::wght@400;700&display=swap"
- rel="stylesheet">
+  href='https://fonts.googleapis.com/css?family=Roboto::wght@400;700&display=swap" rel="stylesheet">
 ```
 3. Додайте до сторінки index.html наступну розмітку
 ```html
@@ -67,7 +66,7 @@ strong {
     <li>Item 5</li>
 </ul>
 ```
-- стилізувати елементи списку квадратами
+- стилізувати елементи списку за длпомогою стилю квадрат
 ### Рішення:
 ```html
 <style>
@@ -89,14 +88,7 @@ ul {
     <title>Моя домашня сторінка</title>
 
 	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-
-	
 	<!-- додайте тут Google Fonts «Roboto» -->
-
-	<style>
-		@import url("css/common.css");
-    </style>
-
 	<link href="css/main.css" rel="stylesheet">
 
 </head>
@@ -131,7 +123,7 @@ ul {
 		--fuuter-bg-color: #000;
 	}
 ```
-- Визначити у глобальній області видимості змінні:
+	- Визначити у глобальній області видимості змінні:
 		--primary-font-family: 'Roboto', sans-serif; 
 		--primary-font-size: 0.875rem;
 
@@ -180,7 +172,7 @@ h2 {
 10. Відредагуйте файл index.html
 	- В розділі footer створіть section з атрибутом class="footer-social"
 	- В середині цієї секції розмістіть елемент ul з атрибутом class="list-unstyled"
-	- В середині ul розмістіть елементи li, кожний з яких має містити посилання на одну з соціальних мереж - facebookб twitter, github, linkedin, youtube, instagram.
+	- В середині ul розмістіть елементи li, кожний з яких має містити посилання на одну з соціальних мереж - facebook, twitter, github, linkedin, youtube, instagram.
 	- Перегляньте документацію для font-awesome, знайдіть іконки відповідних соц-мереж та вставте їх як текст посилань
 
 ### Рішення:
@@ -200,7 +192,7 @@ h2 {
 ```
 
 11. Відредагуйте файл index.html
-	- В розділі header створіть ще один підрозділ nav з атрибутом class="footer-social"
+	- В розділі header створіть ще один підрозділ nav
 ```html
 	<header>
       	<nav>
@@ -241,7 +233,6 @@ h2 {
 		</nav>
 	</header>
 ```
-### Рішення:
 ```css
 
 a {

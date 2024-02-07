@@ -2,7 +2,7 @@
 HTML/CSS/JavaScript/ReactJS practice exercises with solutions
 ## Exercises for lecture #4 Селектори CSS
 
-1. В середині exercises створіть піддирексторію lecture-04. В середині lecture-04 створіть файли index.html, css/main.css та README.md. Відредагуйте файл index.html
+1. В середині exercises створіть піддирексторію lecture-04. В середині lecture-04 створіть файли index.html, css/main.css та README.md. Відредагуйте файл index.html:
 
 ```html
 <!DOCTYPE html>
@@ -35,8 +35,6 @@ HTML/CSS/JavaScript/ReactJS practice exercises with solutions
 	<footer>
 		<h2 class="h2">This is a h2.</h2>
 		<p class="heading">This is a heading.</p>
-		
-	
 	</footer>
 
 	<p class="heading">This is a heading.</p>
@@ -258,4 +256,3 @@ h1, h2, h3 {
 
 ## LICENSE
 This repository follows the [MIT License](https://github.com/janusnic/web-dev-exercises-with-solutions/tree/main/LICENSE).
-
