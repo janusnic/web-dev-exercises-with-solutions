@@ -2,9 +2,7 @@
 HTML/CSS/JavaScript/ReactJS practice exercises with solutions
 ## Exercises for lecture #7 Графічні формати
 
-1. В середині exercises створіть піддирексторію lecture-07. В середині lecture-07 створіть файли index.html та README.md
-
-- Відредагуйте файл index.html
+1. В середині exercises створіть піддирексторію lecture-07. В середині lecture-07 створіть файли index.html та README.md. Відредагуйте файл index.html
 
 ```html
 <!DOCTYPE html>
@@ -36,15 +34,13 @@ HTML/CSS/JavaScript/ReactJS practice exercises with solutions
     <div class="radial">
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis cum magnam quae adipisci minima illum porro eius ipsa rem. Sequi eaque facere necessitatibus fugiat rerum facilis reprehenderit numquam dignissimos itaque!
     </div>
-
 </body>
 </html>
-
 ```
+## Solutions:
     - Встановити background для класу body як лінійний градієнт, що напрвлений вправо, та моє такі точки зупинки: 5%, 17%, 40%, 85%, 95%. Для кожної точки зупинки встановити колір, що змінюється від світлозеленго до темнозеленго. 
 ```html
  <style>
-
 .body {background-image: linear-gradient(to right,
     rgb(0, 225, 0) 5%, rgb(30, 205, 5) 17%, rgb(0, 155, 85) 40%, rgb(2, 55, 1) 85%, #025a1ff1 95%);
     }
@@ -75,7 +71,6 @@ HTML/CSS/JavaScript/ReactJS practice exercises with solutions
 </style>
 ```
     - Встановити background для класу radial два радіальних градієнта з типом ellipse, перший з яких містить 2 кольори - помаранчевмй та прозорий і напрвлений вверх, а другий містить 2 кольори - червонмй та прозорий і напрвлений вниз. 
-
 ```html
  <style>
 .radial{
@@ -84,33 +79,35 @@ HTML/CSS/JavaScript/ReactJS practice exercises with solutions
 }
 </style>
 ```
+
 2. Стаорити svg-прямокутник розміром 100х100 з координатами 20,20 20, 20. Для обрамлення встановити колір #1c87c9 та товщину лінії 4. Встановити фон прямокутника lightgray.
+## Solution:
 ```html
 <svg width="180" height="180">
     <rect x="20" y="20" rx="20" ry="20" width="100" height="100" style="fill:lightgray; stroke:#1c87c9; stroke-width:4;"/>
 </svg>
 ```
 3. Стаорити svg-коло розміром 200х200 радіусом = 60 та центром з координатами 100, 70. Для обрамлення встановити червоний колір та товщину лінії 4. Встановити фон кола lightgray.
+## Solution:
 ```html
 <svg width="200" height="200">
     <circle cx="100" cy="70" r="60" stroke="red" stroke-width="4" fill="lightgray"/>
 </svg>
 ```
-
 4. Створити svg-малюнок годинника, що показує час = 3 години
+## Solution:
 ```html
 <svg width="100" height="100" fill="red" stroke="white" stroke-width="4">
     <circle cx="50" cy="50" r="40"></circle>
     <path d="M50 30v25h20"></path>
 </svg>
 ```
-
 5. Створити svg-малюнок зірки
+## Solution:
 ```html
 <svg width="200" height="200">
     <polygon points="100,10 40,198 190,78 10,78 160,198" style="fill:lightgray; stroke:#1c87c9; stroke-width:4; fill-rule:evenodd;"/>
 </svg>
 ```
-
 ## LICENSE
 This repository follows the [MIT License](https://github.com/janusnic/web-dev-exercises-with-solutions/tree/main/LICENSE).

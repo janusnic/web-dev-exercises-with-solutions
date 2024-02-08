@@ -2,89 +2,85 @@
 HTML/CSS/JavaScript/ReactJS practice exercises with solutions
 ## Exercises for lecture #9 Управління потоком
 
-1. В середині exercises створіть піддирексторію lecture-09. В середині lecture-09 створіть файли index.html та README.md
-
-   - Відредагуйте файл index.html
+1. В середині exercises створіть піддирексторію lecture-09. В середині lecture-09 створіть файли index.html та README.md. Відредагуйте файл index.html
 
 ```html
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>lecture #9 Управління потоком</title>
-	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-
+	  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <style>
+      img {
+        width: 250px;
+        margin-left: 17px;
+        margin-bottom: 10px;
+      }
+    </style>
 </head>
 <body>
-
+  <h1>Управління потоком</h1>
+  <p>
+    Examples of the CSS float Property
+    Below are some examples of how the CSS float property works.
+    <img src="example.jpg">
+  </p>
 </body>
 </html>
-
 ```
-   - додайте таку розмітку:
+  - Перемістити зображення вправо
+## Solution:
+```css
+   img {
+    width: 250px;
+    float: right;
+    margin-left: 17px;
+    margin-bottom: 10px;
+   }
+```
+
+2. додайте до index.html таку розмітку:
 
 ```html
-<style>
+<p>Статичне позиціонування є типовим для кожного елемента. Це просто означає помістіть елемент у звичайне положення в документі.</p>
+<p class="static-position">Статичне позиціонування є типовим для кожного елемента. Це просто означає помістіть елемент у звичайне положення в документі.</p>
 
-</style>
-<p>
-   Examples of the CSS float Property
-   Below are some examples of how the CSS float property works.
-   <img src="example.jpg">
+<p class="relative-position">
+    Відносне позиціювання. Положення елемента встановлюється відносно його поточного положення. Додавання властивостей left, top, right і bottom змінює позицію елемента і зрушує його в ту чи іншу сторону. Ця властивість дозволяє змінюва ти позицію елемента без зміни макету.
 </p>
 
 ```
-   - Перемістити зображення вправо
+   - визначіть CSS-властивості position: static та background: yellow для класу static-position
+## Solution:
 ```css
-   img {
-   width: 250px;
-   float: right;
-   margin-left: 17px;
-   margin-bottom: 10px;
-   }
+  .static-position {
+      position: static;
+      background: yellow;
+  }
 ```
-   - додайте таку розмітку:
-```html
-<style>
-
-</style>
-<p>Статичне позиціонування є типовим для кожного елемента. Це просто означає помістіть елемент у звичайне положення в документі.</p>
-<p class="positioned">Статичне позиціонування є типовим для кожного елемента. Це просто означає помістіть елемент у звичайне положення в документі.</p>
-```
-   - визначіть у style CSS-властивості position: static та background: yellow для класу positioned
-
-
+   - визначіть CSS-властивості для класу relative-position position: relative, background: red, розташуйте його зверху та зліва на відстані 130px  
+## Solution:
 ```css
-.positioned {
-  position: static;
-  background: yellow;
-}
-
+  .relative-position {
+      position: relative;
+      top: 130px;
+      left: 130px;
+      background: red;
+  }
 ```
-   - визначіть position: relative для класу positioned
 
+   - визначіть CSS-властивості для класу absolute-position position: absolute background: blueviolet, розташуйте його зверху та зліва на відстані 30px
+## Solution:
 ```css
-.positioned {
-   position: relative;
-   top: 30px;
-   left: 30px;
-   background: yellow;
+.absolute-position {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    background-color: blueviolet;
 }
 ```
-
-   - визначіть position: absolute; для класу positioned
-
-```css
-.positioned {
-   position: absolute;
-   top: 30px;
-   left: 30px;
-   background: yellow;
-}
-```
-
    - додайте наступне до свого CSS, щоб зробити перший абзац також абсолютно позиціонованим:
 ```css
 p:nth-of-type(1) {
@@ -94,13 +90,13 @@ p:nth-of-type(1) {
   right: 30px;
 }
 ```
-   - Що потрібно додати до правила p:nth-of-type(1) щод змінити порядок у стеку розташування елементів
-   
+   - Що потрібно додати до правила p:nth-of-type(1) щоб змінити порядок відображення першого абзацу у стеку розташування елементів
+## Solution:   
 ```css
 z-index: 1;
 ```
-   - розмістіть елемент h1 у верхній частині вікна та зафікскйте його позицію
-   
+3. розмістіть елемент h1 у верхній частині вікна на білому тлі та зафікскйте його позицію
+## Solution:   
 ```css
 h1 {
   position: fixed;
@@ -109,9 +105,10 @@ h1 {
   margin-top: 0;
   background: white;
   padding: 10px;
+  z-index: 2;
 }
 ```
-   - додайте таку розмітку:
+4. додайте таку розмітку:
 ```html
 <style>
 dt {
@@ -122,7 +119,7 @@ dt {
 }
 </style>
 
-<h1>Sticky positioning</h1>
+<h2>Sticky positioning</h2>
 
 <dl>
   <dt>A</dt>
@@ -153,6 +150,7 @@ dt {
 </dl>
 ```
    - Що треба додати до визначення dt, щоб змусити панель навігації прокручуватися разом зі сторінкою до певної точки, а потім залишатися у верхній частині сторінки.
+## Solution:
 ```css
 dt {
   background-color: black;
@@ -162,622 +160,8 @@ dt {
   top: 0;
   left: 0;
   margin: 1em 0;
+  z-index: 3;
 }
-```
-
-Let’s see overflow in action with the help of an example.
-
-HTML:
-
- <h1>overflow not set</h1>
-  <p class="box">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived only five centuries.</p>
-
-CSS:
-
- body {
-    font: 15px Georgia, serif;
-  }
-   h1{
-    font: 28px Georgia, Serif;
-    text-align: center;
-  }
-  .box{
-    width: 200px;
-    height: 180px;
-    padding: 8px;
-    border: 1px solid #000;
-    line-height:21px;
-    background-color: #EEEEEE;
-    margin: 0 auto;
-  }
-
-
-In the above example, the box has a fixed width and height. However, the text that was placed inside the box is so long that it cannot fit within the box as intended. The extra text you see dropping past the black border is the overflow.
-
-Test CSS Overflow compatibility across 3000+ browser environments. Try LambdaTest Now!
-
-CSS overflow visible
-Visible is the default value of CSS overflow. It means that not setting the CSS overflow property is the same as setting it to “visible”.
-
-When overflow is visible, the overflowing content will not be clipped. Instead, it will display outside the element’s box and might overlap other elements on the page.
-
-Let’s see a quick example of overflow visible.
-
-У наведеному вище прикладі ящик має фіксовану ширину та висоту. Однак текст, розміщений у полі, настільки довгий, що не може поміститися в поле, як задумано. Додатковий текст, який ви бачите за чорною рамкою, є переповненням.
-
-
-Видно переповнення CSS
-Visible — це значення за замовчуванням переповнення CSS. Це означає, що не встановлювати властивість переповнення CSS те саме, що встановлювати її на «видиме».
-
-Якщо видно переповнення, переповнений вміст не буде обрізано. Натомість він відображатиметься за межами вікна елемента та може перекривати інші елементи на сторінці.
-
-Давайте подивимося на короткий приклад видимого переповнення.
-
-HTML:
-
- <h1>overflow:visible;</h1>
-   <p class="box">Lorem Ipsum is simply dummy text of the printing and  typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived five centuries.</p>
-
- body {
-    font: 15px Georgia, serif;
-  }
-   h1{
-    font: 28px Georgia, Serif;
-    text-align: center;
-  }
-  .box{
-    width: 200px;
-    height: 180px;
-    padding: 8px;
-    border: 1px solid #000;
-    line-height:21px;
-    background-color: #EEEEEE;
-    margin: 0 auto;
-    overflow:visible;
-  }
-
-In the above example, the p element with the class name “box” has an overflow property set to visible.
-
-As you can notice, there is no difference between the box from the previous example, which doesn’t have any overflow property, and this box which has an overflow property. This is because the overflow property is set to visible by default.
-
-CSS overflow hidden
-Overflow hidden means the overflowing content will be hidden and will not be displayed on the page.
-
-Once a web browser comes across the CSS overflow hidden property, it hides the extra content beyond the element’s box.
-
-Let’s look at an example of overflow hidden.
-
-У наведеному вище прикладі елемент p з іменем класу “box” має властивість переповнення, встановлену як visible.
-
-Як ви можете помітити, немає ніякої різниці між полем із попереднього прикладу, яке не має жодної властивості переповнення, і цим полем, яке має властивість переповнення. Це пояснюється тим, що властивість переповнення за замовчуванням встановлено як видиме.
-
-Переповнення CSS приховано
-Переповнення приховане означає, що переповнений вміст буде приховано та не відображатиметься на сторінці.
-
-Коли веб-браузер натрапляє на приховану властивість переповнення CSS, він ховає додатковий вміст за рамкою елемента.
-
-Давайте розглянемо приклад прихованого переповнення.
-HTML:
-
-   <h1>overflow:hidden;</h1>
-    <p class="box">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived five centuries.</p>
-
-  body {
-    font: 15px Georgia, serif;
-  }
-   h1{
-    font: 28px Georgia, Serif;
-    text-align: center;
-  }
-  .box{
-    width: 200px;
-    height: 180px;
-    padding: 8px;
-    border: 1px solid #000;
-    line-height:21px;
-    background-color: #EEEEEE;
-    margin: 0 auto;
-    overflow: hidden;
-  }
-
-As you can see in the example above, the p element with the class name “box” has an overflow property set to hidden. Because of this value, overflowing content is not visible on the page.
-
-CSS overflow scroll
-Setting the overflow value to scroll will hide the overflowing content from rendering outside the element’s box, along with providing scrollbars to view the content.
-
-Note that with setting overflow to scroll, you always get both the horizontal and vertical scrollbars even if the content only requires one or the other.
-
-
-Let’s look at an example of overflow scroll.
-
-Як ви можете бачити в наведеному вище прикладі, елемент p з іменем класу “box” має властивість overflow, встановлену на hidden. Через це значення переповнений вміст не видно на сторінці.
-
-Прокручування переповнення CSS
-Встановлення значення переповнення для прокручування приховає переповнений вміст від візуалізації за межами вікна елемента разом із наданням смуг прокручування для перегляду вмісту.
-
-Зауважте, що, налаштувавши переповнення для прокручування, ви завжди отримуєте як горизонтальну, так і вертикальну смуги прокручування, навіть якщо для вмісту потрібна лише одна чи інша.
-
-
-Давайте розглянемо приклад прокручування переповнення.
-
-
-HTML:
-
-<h1>overflow:scroll;</h1>
-    <p class="box">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived five centuries.</p>
-
- body {
-    font: 15px Georgia, serif;
-  }
-   h1{
-    font: 28px Georgia, Serif;
-    text-align: center;
-  }
-  .box{
-    width: 200px;
-    height: 180px;
-    padding: 8px;
-    border: 1px solid #000;
-    line-height:21px;
-    background-color: #EEEEEE;
-    margin: 0 auto;
-    overflow: scroll;
-  }
-
-As you can see in the example above, the box has the overflow property set to scroll which gives us the scrollbar in the output.
-
-CSS overflow auto
-The overflow auto value is almost similar to overflow scroll, in addition it also solves the problem of getting scrollbars even when we don’t need them.
-
-As discussed above, with overflow scroll we get both the horizontal and vertical scrollbar even if we don’t need them. But in case of overflow auto, we get the scrollbar only when the content actually goes outside the element’s box.
-
-Let’s look at an example of overflow auto.
-
-Як ви можете бачити в наведеному вище прикладі, поле має властивість переповнення, налаштовану на прокручування, що дає нам смугу прокрутки у виводі.
-
-Автоматичне переповнення CSS
-Значення overflow auto майже схоже на overflow scroll, крім того, воно також вирішує проблему отримання смуг прокрутки, навіть якщо вони нам не потрібні.
-
-Як обговорювалося вище, за допомогою переповнення прокручування ми отримуємо як горизонтальну, так і вертикальну смуги прокручування, навіть якщо вони нам не потрібні. Але у випадку автоматичного переповнення ми отримуємо смугу прокрутки лише тоді, коли вміст фактично виходить за рамки елемента.
-
-Давайте розглянемо приклад автоматичного переповнення.
-
-HTML:
-
-<h1>overflow:auto;</h1>
-    <p class="box">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived five centuries.</p>
-
- body {
-    font: 15px Georgia, serif;
-  }
-   h1{
-    font: 28px Georgia, Serif;
-    text-align: center;
-  }
-  .box{
-    width: 200px;
-    height: 180px;
-    padding: 8px;
-    border: 1px solid #000;
-    line-height:21px;
-    background-color: #EEEEEE;
-    margin: 0 auto;
-    overflow: auto;
-  }
-
-
-As we can see in the example above, the p element with the class name “box” has the overflow attribute set to auto. Because of that, we only get the horizontal scrollbar since our content only overflows horizontally.
-
-X and Y property of CSS overflow
-Till this point, we used the overflow shorthand property to set overflow. Instead, we can also use overflow-x and overflow-y to control the overflow horizontally or vertically.
-
-Overflow-x is used to control the horizontal overflow of an element. In simple terms, it specifies what to do with the right or left edges of the content.
-
-Overflow-y is used to control the vertical overflow of an element. In simple terms, it specifies what to do with the top or bottom edges of the content.
-
-Below is an example of overflow-x and overflow-y properties.
-
-Як ми можемо бачити в наведеному вище прикладі, елемент p з іменем класу “box” має атрибут переповнення, встановлений на auto. Через це ми отримуємо лише горизонтальну смугу прокрутки, оскільки наш вміст переповнюється лише горизонтально.
-
-Властивості X і Y переповнення CSS
-До цього моменту ми використовували скорочену властивість переповнення, щоб встановити переповнення. Замість цього ми також можемо використовувати overflow-x і overflow-y, щоб керувати горизонтальним або вертикальним переповненням.
-
-Overflow-x використовується для керування горизонтальним переповненням елемента. Простіше кажучи, він визначає, що робити з правим чи лівим краями вмісту.
-
-Overflow-y використовується для керування вертикальним переповненням елемента. Простіше кажучи, він визначає, що робити з верхнім або нижнім краєм вмісту.
-
-Нижче наведено приклад властивостей overflow-x і overflow-y.
- <h1>overflow x and y</h1>
-    <p class="box">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived five centuries.</p>
-
-body {
-    font: 15px Georgia, serif;
-  }
-   h1{
-    font: 28px Georgia, Serif;
-    text-align: center;
-  }
-  .box{
-    width: 200px;
-    height: 180px;
-    padding: 8px;
-    border: 1px solid #000;
-    line-height:21px;
-    background-color: #EEEEEE;
-    margin: 0 auto;
-    overflow-x:scroll;
-    /*add horizontal  scrollbar*/
-    overflow-y: hidden;
-    /*hide vertical scrollbar */
-    white-space: nowrap;
-  }
-
-
-In the example above, we set overflow-x to scroll, because of which, we can scroll right and left. Next, we also set overflow-y to hidden, because of which we can not scroll up and down.
-
-We used a property named “white-space with the value “no-wrap”. This is used to specify how whitespace inside elements is handled. White-space set to no-wrap means the element’s content will not be wrapped to a new line.
-
-CSS overflow wrap
-With the use of the overflow-wrap property in CSS, we can tell the browser to break lines of long words in case the content overflows from the element’s box. This helps prevent layout issues caused by overflow from an unusually long string of text.
-
-This property has three values which are:
-
-normal: this is the default value where the browser will break lines according to its line-breaking rules. Long strings will not break even if they overflow the element’s box.
-break-word: with this value, words or strings of characters too long to fit inside their container will split at random points, causing a line break.
-inherit: this will inherit the value of the overflow-wrap attribute, which was set on the targeted element’s immediate parent.
-Below is an example of overflow-wrap.
-
-У наведеному вище прикладі ми встановили переповнення-x для прокручування, завдяки чому ми можемо прокручувати праворуч і ліворуч. Далі ми також встановлюємо для overflow-y значення hidden, через що ми не можемо прокручувати вгору та вниз.
-
-Ми використали властивість під назвою «white-space» зі значенням «no-wrap». Це використовується для визначення того, як обробляються пробіли всередині елементів. Пробіли, встановлені як no-wrap, означають, що вміст елемента не буде перенесено на новий рядок.
-
-Переповнення CSS
-Використовуючи властивість overflow-wrap у CSS, ми можемо наказати браузеру розривати рядки довгих слів, якщо вміст переповнюється з вікна елемента. Це допомагає запобігти проблемам з макетом, спричиненим переповненням із надзвичайно довгого рядка тексту.
-
-Ця властивість має три значення:
-
-нормальний: це значення за замовчуванням, коли браузер розриває рядки відповідно до своїх правил розриву рядків. Довгі рядки не розірвуться, навіть якщо вони переповнять поле елемента.
-break-word: із цим значенням слова або рядки символів, які занадто довгі, щоб поміститися в їх контейнері, розділяться у випадкових точках, викликаючи розрив рядка.
-inherit: це успадкує значення атрибута overflow-wrap, який було встановлено для безпосереднього батька цільового елемента.
-Нижче наведено приклад переповнення.
-<h1>overflow-wrap</h1>
-    <p class="box">This element contains a very long word: thisisaveryveryveryveryveryverylongword. By default, the long word will not break and wrap to the next line. With break-word, the long word will break.</p>
- body {
-    font: 15px Georgia, serif;
-  }
-   h1{
-    font: 28px Georgia, Serif;
-    text-align: center;
-  }
-  .box{
-    width: 200px;
-    height: 180px;
-    padding: 8px;
-    border: 1px solid #000;
-    line-height:21px;
-    margin: 0 auto;
-    background-color:yellow;
-    overflow-wrap: break-word;/*try removing the overflow-wrap to see the difference*/
-  }
-
-
-In the above example, we can see that the box has the overflow-property set to break-word, which breaks the long string of characters and wraps them to the next line, ensuring that our content does not overflow from the container. However, if we do not specify the property, the long words will not break, and it will overflow the container.
-
-У наведеному вище прикладі ми бачимо, що вікно має властивість переповнення, встановлену на break-word, яка розриває довгий рядок символів і переносить їх на наступний рядок, гарантуючи, що наш вміст не переповнюється з контейнера. Однак, якщо ми не вкажемо властивість, довгі слова не розіб’ються, і вони переповнять контейнер.
-
-
-Що таке скорочення тексту?
-У CSS скорочення тексту використовується для скорочення тексту, який переповнює контейнер, приховуючи зайвий вміст і замінюючи його еліпсами. Цей прийом корисний для створення більш компактних і візуально привабливих макетів у ситуаціях, коли довжина тексту може змінюватися, наприклад у навігаційних меню, клітинках таблиць або заголовках.
-
-Властивість CSS, яку ви використовуєте для скорочення тексту, це text-overflow. Щоб увімкнути скорочення тексту, вам потрібно встановити для властивості text-overflow значення «ellipsis», а для властивості пробілу — значення nowrap, щоб запобігти переносу тексту на наступний рядок. Вам також може знадобитися встановити для властивості переповнення значення "hidden", щоб приховати будь-який текст, який переповнює контейнер.
-
-Давайте зараз обговоримо ці властивості докладніше.
-
-Властивості CSS для скорочення тексту
-Для скорочення тексту можна використовувати різні властивості CSS. Нижче наведено деякі з найпоширеніших властивостей CSS:
-
-text-overflow : ця властивість визначає, як має відображатися текстовий вміст, коли він переповнює область вмісту елемента. Властивість text-overflow може приймати одне з таких значень:
-
-кліп: якщо текст виходить за межі області вмісту елемента, він вирізається та не відображається.
-крапка: якщо текст перевищує область вмісту елемента, він скорочується, а в кінці вставляється крапка (...).
-згасання: якщо текст перевищує область вмісту елемента, він скорочується, а в кінці додається ефект зникнення.
-пробіл: ця властивість керує тим, як обробляються пробіли в тексті. Атрибут white-space має такі можливі властивості:
-
-звичайний: браузер розриває рядки тексту, щоб вони помістилися в межах доступного простору.
-nowrap: браузер не розриватиме рядки тексту, що може спричинити переповнення текстом області вмісту елемента.
-pre: Браузер зберігатиме пробіли, через що текст може переповнювати область вмісту елемента.
-переповнення: ця властивість визначає, як слід обробляти переповнений вміст. Властивість переповнення може приймати одне з наступних значень:
-
-видимий: переповнений вміст видимий і не обрізаний.
-приховано: переповнений вміст прихований і невидимий.
-прокручування: видимий переповнений вміст, додано смуги прокручування, щоб увімкнути прокручування.
-auto: переповнений вміст видно, а смуги прокрутки додаються до елемента, лише якщо вміст переповнюється.
-Щоб скоротити текст, ви можете використовувати властивість text-overflow у поєднанні з властивостями white-space і overflow. для
-
-Динамічне скорочення
-Ви також можете реалізувати динамічне скорочення за допомогою CSS для відображення текстового вмісту на веб-сторінці. Одним із поширених випадків використання динамічного скорочення за допомогою CSS є обмеження обсягу тексту, який відображається в контейнері, одночасно надаючи посилання або кнопку «читати далі», щоб дозволити користувачам розширювати вміст.
-
-Ось приклад коду HTML і CSS, який реалізує динамічний CSS у скороченні тексту з рамкою навколо тексту, яка вказує на його ширину:
-
-The HTML code:
-
-<html>
-  <body>
-    <div class="list">
-      <div class="card">
-        <h3>First Example</h3>
-        <p class="text single-line">
-          mollis, ante non euismod ornare, orci diam ornare orci, eu mattis
-          tortor lectus at erat. Nam rutrum erat nec euismod lacinia. Curabitur
-          et velit ut mauris euismod tempus. Fusce pharetra augue lectus, quis
-          maximus quam auctor pellentesque.  
-        </p>
-      </div>
-      <div class="card">
-        <h3>Second Example header</h3>
-        <p class="text single-line">
-          Curabitur pharetra, erat a gravida malesuada, augue mi tincidunt odio,
-          quis rhoncus tortor metus ut purus. Nunc lectus quam, tempus sed
-          mollis id, feugiat a quam. Donec posuere nulla a lacus interdum
-          faucibus ut tincidunt nisi. 
-        </p>
-      </div>
-    </div>
-  </body>
-</html> <body>
-    <div class="list">
-        <div class="card">
-          <h3>First Example</h3>
-          <p class="text single-line">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam augue nulla, elementum non erat id, cursus feugiat sem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nullam velit neque, tincidunt in ipsum vel, accumsan mattis nisi. 
-          </p>
-        </div>
-            <div class="card">
-          <h3>Second Example header</h3>
-          <p class="text single-line">
-            Curabitur pharetra, erat a gravida malesuada, augue mi tincidunt odio, quis rhoncus tortor metus ut purus. Nunc lectus quam, tempus sed mollis id, feugiat a quam. Donec posuere nulla a lacus interdum faucibus ut tincidunt nisi. Curabitur consequat vitae turpis quis lobortis. 
-          </p>
-        </div>
-      </div>
-      
-</body>
-</html>
-
-Below is the HTML code output without adding the CSS:
-
-
-Here's the CSS code to truncate the overflowing text:
-
-.list {
-  display: flex;
-  flex-direction: column;
-}
-
-.card {
-  border: 1px solid #1948e3;
-  border-radius: 8px;
-  height: 100px;
-  margin: 0 auto;
-  padding: 15px 25px;
-  width: 890px;
-}
-
-.card:not(:last-of-type) {
-  margin-bottom: 20px;
-}
-
-.text.single-line {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-Як створити багаторядковий усічений текст
-Властивості CSS ефективно скорочують один рядок тексту або багаторядковий текст, що охоплює два або менше рядків. Але також можна досягти скорочення тексту для багаторядкового тексту за допомогою JavaScript.
-
-У наступних розділах ми розглянемо два способи скорочення багаторядкового тексту, один із яких використовує CSS, а інший — JavaScript. Вивчивши обидва підходи, ви зможете вирішити, яка техніка найкраще відповідає вашим потребам.
-
-Як використовувати CSS для скорочення багаторядкового тексту
-Властивості CSS добре працюють для однорядкового тексту та багаторядкового тексту, який охоплює більше двох рядків.
-
-Першим кроком є визначення висоти коробки або елемента. Далі ми множимо висоту рядка на кількість рядків, які ми хочемо проігнорувати перед усіканням, щоб отримати максимальну висоту.
-
-Ось як це робиться:
-
-<body>
-  <h3>Multi-line Text Truncation overflow!</h3>
-
-  <p class="truncate-overflow">
-    Lorem ipsum dolor sit, amet consectetur adipisicing elit. In sint facilis
-    explicabo voluptatum exercitationem earum. Quibusdam vitae, iusto temporibus
-    corrupti tempore distinctio soluta reiciendis. Ab aspernatur facilis autem
-    temporibus veniam.
-  </p>
-
-  <p class="truncate-overflow">
-    Multi-line text truncation is a common design pattern that allows designers to show a limited amount of text on a web page or application, while still giving users the ability to see more if they desire.
-  </p>
-
-  <p class="truncate-overflow">
-    In CSS, there are several ways to truncate multi-line text, including using the text-overflow property in combination with display, white-space, and overflow.
-  </p>
-</body>
-
-
-Now let's set the Overflow to hidden and the max-height to our preferred height, the same as the line-height.
-
-Then we have -webkit-box-orient set to vertical, -webkit-line-clamp, and text-overflow set to ellipsis. We'll also change the display to box:
-
-Тепер давайте встановимо переповнення на приховане, а максимальну висоту — бажану висоту, таку саму, як висота лінії.
-
-Тоді у нас є параметри -webkit-box-orient, встановлені як вертикальні, -webkit-line-clamp, а для text-overflow — три крапки. Ми також змінимо відображення на поле:
-
-
-:root {
-  --lh: 1.4rem;
-}
-
-html {
-  max-width: 22rem;
-  margin: 2rem auto;
-  line-height: var(--lh);
-}
-
-.truncate-overflow {
-  --max-lines: 3;
-  position: relative;
-  max-height: calc(var(--lh) * var(--max-lines));
-  overflow: hidden;
-  padding-right: 1rem;
-}
-
-.truncate-overflow::before {
-  position: absolute;
-  content: "...";
-  bottom: 0;
-  right: 0;
-}
-.truncate-overflow::after {
-  content: "";
-  position: absolute;
-  right: 0;
-  width: 1rem;
-  height: 1rem;
-  background: white;
-}
-
-
-2. Відредагуйте файл index.html домашньої сторінки
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Моя домашня сторінка</title>
-	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-
-</head>
-<body>
-   <header class="page-header">
-      ...
-   </header>  
-```
-   - Визначити для класу page-header властивість position як фіксовану, що мічтиться в точці top:0, left:0, right:0 та має найвищий z-index
-
-```css
-   .page-header {
-      background: #fff;
-      padding: 2rem 9%;
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 1000;
-   }   
-```
-
-```html
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Моя домашня сторінка</title>
-	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-
-</head>
-<body>
-   <!-- catalog -->
-   <section class="catalog" id="catalog">
-      <div class="container">
-        <header class="header">
-          <h2>Our <span>Products</span></h2>
-        </header>
-         <!-- - product-container -->
-         <div class="product-container">
-          <div class="product">
-            <!-- - додайте таку розмітку: -->
-            <div class="icons">
-              <a href="#" class="fas fa-shopping-cart"></a>
-              <a href="#" class="fas fa-heart"></a>
-              <a href="#productView" class="fas fa-eye"></a>
-            </div>
-         
-            <div class="image">
-               <!-- - додайте таку розмітку: -->
-              <div class="badge text-white bg-sale">Sale</div>
-              <img src="images/product-1.jpg">
-            </div>
-
-            <div class="content">
-              <h3>Product Name</h3>
-              <div class="price">12</div>
-            </div>
-           </div>
-         </div>
-      </div>
-
-</body>
-</html>
-
-```
-   - Визначити для класу icons властивість position як абсолютну, що мічтиться в точці top:1rem, right:2rem відносно елементв з класом product 
-   
-```css
-.product-container .product .icons a {
-   display: block;
-   width: 4rem;
-   height: 4rem;
-   line-height: 4rem;
-   font-size: 2rem;
-   margin-top: 1rem;
-   background: #fff;
-   color: #130f40;
-   text-align: center;
-}
-
-.product-container .product {
-   position: relative;
-}
-
-.product-container .product .icons {
-   position: absolute;
-   top: 1rem;
-   right: 2rem;
-   z-index: 10;
-}
-```
-   - Визначити для класу badge властивість position як абсолютну, що мічтиться в точці top:1rem, left: 1rem відносно елементв з класом product 
-```css
-.badge {
-   display: inline-block;
-   padding: .35em .65em;
-   font-size: .8em;
-   font-weight: 400;
-   line-height: 1;
-   color: #fff;
-   text-align: center;
-   white-space: nowrap;
-   vertical-align: baseline;
-}
-
-.badge:empty {
-   display: none;
-}
-
-.product .badge {
-   position: absolute;
-   top: 1rem;
-   left: 1rem;
-   z-index: 1;
-}
-
-.bg-sale {
-   background-color: lawngreen;
-}
-
 ```
 
 ## LICENSE

@@ -5,24 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <!-- change the title to: Lesson 2 challenges -->
     <title>Document</title>
-</head>
-<body>
-    <h2>Hello there!</h2>
-    <!-- Enter your code below this line-->
-    <!-- Add a subheading to Annie's wiki named, About Programming -->
-    <h2>About Programming</h2>
-    <!-- Enter your code above this line-->
-    <!-- Add a another subheading with a name, About HTML -->
-    <h3>About HTML</h3>
-    <!-- Enter your code above this line-->
-    <!-- Add a subheading below the subheading: About Programming named, About CSS -->
-    <h3>About CSS</h3>
-    <!-- Enter your code above this line-->
 
-    <div>
-        <h1>This is a heading.</h1>
-    </div>
-    Тут <h1> є нащадком <div>.
+    <style>
+        h1 span {
+            width: min-content;
+            display: inline-block;
+        }
+        h2 span {
+            position: relative;
+            top: -8px;
+            display: inline-block;
+            width: min-content;
+            background: #fafafa;
+            padding: 0 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <h1><span>Awesome article</span></h1>
+    
+    <h2><span>A title for an awesome article</span></h2>
      
 </body>
 </html>

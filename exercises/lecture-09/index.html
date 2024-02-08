@@ -6,10 +6,49 @@
      <!-- change the title to: Lesson 2 challenges -->
     <title>Document</title>
     <style>
-        .positioned {
-        position: sticky;
-        top: 30px;
-        left: 30px;
+        
+        img {
+            float: right;
+            width: 60%;
+            margin-left: 5px;
+        }
+
+        .static-position {
+            position: static;
+            background: yellow;
+        }
+
+        .relative-position {
+            position: relative;
+            top: 130px;
+            left: 130px;
+            background: red;
+        }
+
+
+        .absolute-position {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            background-color: blueviolet;
+        }
+
+        p:nth-of-type(1) {
+            position: absolute;
+            background: lime;
+            top: 10px;
+            right: 30px;
+            z-index: 1;
+        }
+
+        h1 {
+            position: fixed;
+            top: 0;
+            width: 500px;
+            margin-top: 0;
+            background: white;
+            padding: 10px;
+            z-index: 2;
         }
 
         dt {
@@ -20,59 +59,35 @@
             top: 0;
             left: 0;
             margin: 1em 0;
+            z-index: 3;
         }
-
-
-        div {
-            background-color: #fff29c;
-            border: 3px solid #301551;
-            color: #301551;
-            padding: 10px;
-            }
-
-        img {
-            float: right;
-            width: 60%;
-            margin-left: 5px;
-        }
-
-        div {
-        background-color: #fff29c;
-        border: 3px solid #301551;
-        color: #301551;
-        padding: 10px;
-        }
-
-        div::after {
-        content: "";
-        display: block;
-        clear: both;
-        }
-
-        img {
-        float: right;
-        width: 60%;
-        margin-left: 5px;
-        }
-
-        div {
-        background-color: #fff29c;
-        border: 3px solid #301551;
-        color: #301551;
-        padding: 10px;
-        overflow: auto;
-        }
-
-        img {
-        float: right;
-        width: 60%;
-        margin-left: 5px;
-        }
-
+       
     </style>
 </head>
 <body>
-    <h1>Sticky positioning</h1>
+    <h1>Управління потоком</h1>
+    <p>
+        Examples of the CSS float Property
+        Below are some examples of how the CSS float property works.
+        <img src="example.jpg">
+    </p>
+
+    <p>Статичне позиціонування є типовим для кожного елемента. Це просто означає помістіть елемент у звичайне положення в документі.</p>
+    
+    <p class="static-position">Статичне позиціонування є типовим для кожного елемента. Це просто означає помістіть елемент у звичайне положення в документі.</p>
+
+    <p class="relative-position">
+        Відносне позиціювання. Положення елемента встановлюється відносно його поточного положення. Додавання властивостей left, top, right і bottom змінює позицію елемента і зрушує його в ту чи іншу сторону. Ця властивість дозволяє змінюва ти позицію елемента без зміни макету.
+    </p>
+
+    <p class="absolute-position">
+        Видаляє елемент з загального потоку (місце, що звільнив елемент заповнюється іншими елементами) і вставляється відносно свого батьківського, не статично позиційованого елемента, якщо такого елемента немає, то їм вважається вікно браузера (При цьому ширина елемента, без задання, встановлюється за його вмістом). Нове місце розраховується за допомогою властивостей left, top, right та bottom
+        На положення впливає значення властивості position батьківського елемента. Так, якщо у батька значення position встановлено як static або батька немає, то відлік координат ведеться від краю вікна браузера.
+        Якщо у батька значення position задано як relative, то відлік координат ведеться від краю батьківського елементу.
+    </p>
+
+
+    <h2>Sticky positioning</h2>
     <dl>
         <dt>A</dt>
             <dd>Apple</dd>

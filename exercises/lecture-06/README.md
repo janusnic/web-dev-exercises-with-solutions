@@ -250,43 +250,43 @@ h1.hero::after {
 
 ```css
 	html {
+      --main-color: #009;
+      --anchor-color: #333;
+      --anchor-active-color: salmon;
 		--primary-text-color: #000;
 		--primary-bg-color: #fff;
 		--primary-font-family: 'Roboto', sans-serif; 
-		--primary-font-size: 0.875rem;
+		--primary-font-size: 0.875rem / 1.4;
 	}
 ```
 	- Замініть елемент html на псевдоклас :root
 ### Рішення:
 ```css
 	:root {
+      --main-color: #009;
+      --anchor-color: #333;
+      --anchor-active-color: salmon;
 		--primary-text-color: #000;
 		--primary-bg-color: #fff;
 		--primary-font-family: 'Roboto', sans-serif; 
-		--primary-font-size: 0.875rem;
+		--primary-font-size: 0.875rem / 1.4;
 	}
 ```
-
-
 13. Відредагуйте файл catalog.html
 
 ```html
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catalog</title>
-
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Catalog</title>
 	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-	<link href="https://fonts.googleapis.com/css?family=Roboto::wght@400;700&display=swap" rel="stylesheet">
-    <link href="css/common.css" rel="stylesheet">
 	<link href="css/main.css" rel="stylesheet">
-
 </head>
 <body>
-	<aside>
+
+   <aside>
         <h2 class="text-uppercase">Categories</h2>
                 
         <div class="bg-dark text-white">
@@ -317,12 +317,10 @@ h1.hero::after {
 ```css
 .text-uppercase {
     text-transform: uppercase;
-
 }
 
 .bg-dark {
     background-color: black;
-    
 }
 .text-white {
     color: white;
@@ -342,4 +340,3 @@ ul.categories li a:hover {
 ```
 ## LICENSE
 This repository follows the [MIT License](https://github.com/janusnic/web-dev-exercises-with-solutions/tree/main/LICENSE).
-
