@@ -70,7 +70,6 @@ HTML/CSS/JavaScript/ReactJS practice exercises with solutions
       background: red;
   }
 ```
-
    - визначіть CSS-властивості для класу absolute-position position: absolute background: blueviolet, розташуйте його зверху та зліва на відстані 30px
 ## Solution:
 ```css
@@ -166,5 +165,3 @@ dt {
 
 ## LICENSE
 This repository follows the [MIT License](https://github.com/janusnic/web-dev-exercises-with-solutions/tree/main/LICENSE).
-
-
