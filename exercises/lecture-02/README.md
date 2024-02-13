@@ -130,10 +130,11 @@ This is another line after line break.<br/>
 		<!-- Тут має бути елемент списку елементів, де порядок елементів не важливий -->
 		<change_me>
  			<!-- Елементи списку є дочірніми вузлами списку елементів. -->
-  			<change_me>
-  				<!-- Елемент з обов’язковим атрибутом href, що задає URl-адресу веб-сторінки: -->
-  				<change_me href="/">Home</change_me>
-	  			<change_me><a href="/events">Current Events</a></change_me>
+	  			<change_me>
+	  				<!-- Елемент з обов’язковим атрибутом href, що задає URl-адресу веб-сторінки: -->
+	  				<change_me href="/">Home</change_me>
+				</change_me>
+				<change_me><a href="/events">Current Events</a></change_me>
  			</change_me>
  		</change_me>
 	</change_me>
