@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+
+  <title>sizing keywords</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+<style>
+.min-content {
+  inline-size: -webkit-min-content;
+  inline-size: -moz-min-content;
+  inline-size: min-content;
+}
+
+.max-content {
+  inline-size: -webkit-max-content;
+  inline-size: -moz-max-content;
+  inline-size: max-content;
+}
+
+.fit-content {
+  inline-size: -webkit-fit-content;
+  inline-size: -moz-fit-content;
+  inline-size: fit-content;
+}
+
+body {
+  --padding: 5vw;
+  --max-width: 40ch;
+}
+
+body > * + * {
+  -webkit-margin-before: min(2rem, 4vh);
+          margin-block-start: min(2rem, 4vh);
+}
+</style>
+</head>
+
+<body translate="no">
+  <p class="min-content card">This paragraph uses min-content</p>
+<p class="max-content card">This longer paragraph uses max-content</p>
+<p class="fit-content card">This paragraph uses fit-content</p>
+</body>
+
+</html>

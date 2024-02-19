@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+
+  <title>CSS is/where/not/has - check ancestor and previous/next sibling conditions</title>
+
+  
+<style>
+/* paragraphs that are directly after an h2 */
+p:is(h2 + *) {
+  color: blue;
+}
+
+/* paragraphs that are not within blockquotes */
+p:not(blockquote *) {
+  font-family: cursive;
+}
+
+/* Bonus: Check next sibling condition
+- paragraphs that are not directly  followed by an h2 */
+p:not(:has(+ h2)) {
+  text-decoration: underline;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: system-ui;
+  line-height: 1.5;
+}
+
+* + * {
+  -webkit-margin-before: 1em;
+          margin-block-start: 1em;
+}
+</style>
+  
+</head>
+
+<body translate="no">
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa dolor maiores deleniti consequuntur eius ullam fugiat, cum natus.</p>
+<p>Quaerat unde ut voluptatum voluptates quibusdam at fugiat doloribus? Sapiente, tenetur animi. Distinctio illum aliquam atque fugiat quasi.</p>
+<h2>Lorem ipsum dolor sit.</h2>
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt reiciendis, quis assumenda nisi consequuntur illum.</p>
+
+<blockquote>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae cupiditate odit, minus enim excepturi eum!</p>
+</blockquote>
+  
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+
+  <title>Article range selectors with :has()</title>
+
+<style>
+h1 {
+  font-size: clamp(1.45rem, 1rem + 5vw, 3rem);
+}
+
+h2 {
+  font-size: clamp(1.25rem, 1rem + 4vw, 2.25rem);
+}
+
+:is(h1, h2) {
+  background-color: mediumvioletred;
+  color: white;
+  margin-top: 5vh;
+}
+
+article :is(h1, h2) + * {
+  -webkit-margin-before: 1rem;
+          margin-block-start: 1rem;
+  -webkit-padding-before: 1rem;
+          padding-block-start: 1rem;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+article > * ~ :has(+ h2),
+article > :last-child {
+  -webkit-padding-after: 1rem;
+          padding-block-end: 1rem;
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+
+/* All between a range (of h1/h2 ~ h2/:last-child) */
+article :not(h1, h2) {
+  background-color: white;
+  padding-inline: 5%;
+}
+article :not(h1, h2) + * {
+  padding-top: 1em;
+}
+
+article {
+  width: min(95vw, 60ch);
+}
+
+article :where(h1, h2, h3) {
+  line-height: 1.1;
+}
+
+article :not(h1, h2, h3) {
+  line-height: 1.5;
+}
+
+article :is(ol, ul) {
+  -webkit-padding-start: 2rem;
+          padding-inline-start: 2rem;
+}
+</style>
+  
+</head>
+
+<body translate="no">
+  <article>
+  <h1>Lorem ipsum dolor sit amet.</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur veritatis inventore aut vero.</p>
+  <p>Amet corporis explicabo ullam? Reiciendis delectus cumque odio minima illum atque, doloribus aspernatur!</p>
+  <p>Quaerat ea corrupti, saepe blanditiis voluptatem ad, velit earum enim ipsum, laborum facere.</p>
+  <h2>Lorem ipsum dolor sit amet consectetur.</h2>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem asperiores maxime inventore est!</p>
+  <p>Expedita consequuntur facere quisquam optio aliquam reiciendis accusantium officiis. Eos, ab. Nemo, numquam.</p>
+  <p>Veritatis, deleniti consequatur beatae unde debitis quisquam enim fugiat similique quidem sed voluptates?</p>
+  <hr>
+  <p>Laboriosam, expedita. Pariatur assumenda magni quibusdam beatae cupiditate a ea praesentium officiis quam.</p>
+  <p>Quae, voluptatibus quam molestias assumenda earum corporis quis, dolorem aperiam voluptatum minus esse!</p>
+  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+  <hr>
+  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius voluptate consectetur voluptatem odio?</p>
+  <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h2>
+  <p>Inventore ducimus asperiores molestiae accusamus. Est aspernatur eligendi dolorum illo fuga eaque itaque.</p>
+  <p>Lorem ipsum dolor sit amet consectetur.</p>
+  <p>Vero, eligendi possimus numquam aut fugiat, quos molestiae, saepe ducimus optio rem non!</p>
+  <h2>Lorem, ipsum dolor.</h2>
+  <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
+  <ul>
+    <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+    <li>Accusamus adipisci atque totam blanditiis autem consequuntur.</li>
+    <li>Aliquam, molestiae vitae? Possimus cupiditate repellat dignissimos!</li>
+  </ul>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id commodi error excepturi.</p>
+</article>
+  
+</body>
+
+</html>

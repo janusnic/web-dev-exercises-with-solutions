@@ -2,12 +2,7 @@
 HTML/CSS/JavaScript/ReactJS practice exercises with solutions
 ## Exercises for lecture №11 - Модуль Grid
 
-
-
-1. В середині exercises створіть піддирексторію lecture-11. В середині lecture-11 створіть файли index.html та README.md
-
-
-  - Відредагуйте файл index.html
+1. В середині exercises створіть піддирексторію lecture-11. В середині lecture-11 створіть файли index.html та README.md. Відредагуйте файл index.html
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -194,7 +189,7 @@ main {
 }
 ```
   - створити grid-контейнер з 2-х стовпців однакової ширини
-  - встановіть рівномірну відстань до обох кінців контейнера сітки та між його рядками.
+  - встановіть рівномірну відстань до обох кінців контейнера сітки та між її рядками.
 
 ```css
 main {
@@ -204,173 +199,14 @@ main {
 }
 ```
 
-Що таке justify-self: stretch у CSS Grid?
-stretch — це значення за замовчуванням для вирівнювання. Він розтягує вибраний елемент сітки, щоб заповнити вісь рядка (вбудованої) клітинки.
+2. Зробіть копію каталога layout
+    - Створіть сітку з 3-х колонок.
+    - Налаштуйте grid-властивості так, щоб header займав 3 колонки, main - 2 колонки, footer - 3 колонки.
 
-Ілюстрація значення розтягування justify-self у CSS Grid
-значення розтягування justify-self розтягує вибраний елемент сітки, щоб заповнити вісь рядка комірки
-
-Ось приклад:
-
-.grid-item1 {
-  justify-self: stretch;
-}
-
-Початкове значення justify-self розташовує вибраний елемент сітки до краю початку рядка комірки
-
-Ось приклад:
-
-
-.grid-item1 {
-  justify-self: start;
-}
-
-значення justify-self: center розміщує вибраний елемент сітки в центр його комірки
-Ось приклад:
-
-.grid-item1 {
-  justify-self: center;
-}
-Приклад 2: як почати вибраний елемент сітки з рядка стовпця 3
-.grid-item1 {
-  grid-column-start: 3;
-}
-
-Приклад 2: Як завершити вибраний елемент сітки в рядку стовпця 3
-.grid-item1 {
-  grid-column-start: 1;
-  grid-column-end: 3;
-}
-Приклад 3: як розділити вибраний елемент сітки на два стовпці
-
-.grid-item1 {
-  grid-column-start: 2;
-  grid-column-end: span 2;
-}
-
-Іншими словами, замість того, щоб писати:
-
-.grid-item1 {
-  grid-column-start: 1;
-  grid-column-end: 3;
-}
-
-You can alternatively use the grid-column property to shorten your code like so:
-
-.grid-item1 {
-  grid-column: 1 / 3;
-}
-
-How to use grid-area to specify a grid item's name
-Here is the syntax for using the grid-area property to specify a grid item's name:
-
-.your-grid-item {
-  grid-area: item-name;
-}
-
-Here's an example:
-
-.grid-item1 {
-  grid-area: firstDiv;
-}
-
-.grid-item2 {
-  grid-area: middleDiv;
-}
-
-.grid-item2 {
-  grid-area: lastDiv;
-}
-<section>
-  <div class="grid-item1">1</div>
-  <div class="grid-item2">2</div>
-  <div class="grid-item3">3</div>
-</section>
-
-Використання grid-area для визначення іменованого елемента сітки дозволяє властивості grid-template-areas вашого контейнера grid використовувати назву для встановлення розміру та розташування елемента.
-
-Що таке властивість grid-template-areas CSS Grid?
-grid-template-areas визначає область, де ви хочете розмістити іменовані елементи сітки в контейнері сітки.
-
-Пам’ятайте: ми використовуємо властивість CSS grid-area для іменування елементів сітки.
-
-Приклад 1: як розмістити іменований елемент сітки між трьома стовпцями
-
-.grid-item1 {
-  grid-area: firstDiv;
-}
-
-section {
-  display: grid;
-  grid-template-areas: "firstDiv firstDiv firstDiv . .";
-  background-color: orange;
-  margin: 50px;
-}
-
-
-The snippet above used the grid-template-areas property to place grid-item1 across the first three column areas.
-
-Note the following:
-
-Quotation marks ("") define each grid row.
-A period symbol (.) defines an unnamed grid item.
-We used the whitespace character to separate grid columns.
-Example 2: How to specify multiple named grid items' placements
-
-Наведений вище фрагмент використав властивість grid-template-areas для розміщення grid-item1 у перших трьох областях стовпців.
-
-Зверніть увагу на наступне:
-
-Лапки ("") визначають кожен рядок сітки.
-Символ точки (.) визначає елемент сітки без назви.
-Ми використовували пробіл для розділення стовпців сітки.
-
-Приклад 2: Як вказати розміщення кількох іменованих елементів сітки
-
-.grid-item1 {
-  grid-area: header;
-}
-
-.grid-item2 {
-  grid-area: article;
-}
-
-.grid-item3 {
-  grid-area: footer;
-}
-
-.grid-item4 {
-  grid-area: sidebar;
-}
-
-.grid-item5 {
-  grid-area: ads1;
-}
-
-.grid-item6 {
-  grid-area: ads2;
-}
-
-.grid-item7 {
-  grid-area: ads3;
-}
-
-section {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(7, 1fr);
-  grid-template-areas:
-    "header header header header header"
-    "sidebar article article article ads1"
-    "sidebar article article article ads1"
-    "sidebar article article article ads1"
-    "sidebar article article article ads2"
-    "sidebar article article article ads3"
-    "sidebar footer footer footer footer";
-  background-color: orange;
-  margin: 30px;
-}
+3. Зробіть копію каталога template
+    - Налаштуйте grid-властивості так, щоб кожний елемент з класом card мав мінімальну ширину, що дорівнює 100% або var(--min), та максимальну ширину, що дорівнює мінімальній ширині або 1fr. Встановіть атоматичну підгонку стовчиків. 
 
 
 ## LICENSE
 This repository follows the [MIT License](https://github.com/janusnic/web-dev-exercises-with-solutions/tree/main/LICENSE).
+

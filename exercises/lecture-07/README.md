@@ -102,7 +102,7 @@ HTML/CSS/JavaScript/ReactJS practice exercises with solutions
     <path d="M50 30v25h20"></path>
 </svg>
 ```
-5. Створити svg-малюнок зірки
+5. Створити svg-малюнок зірки (не обов'язкове завдання')
 ## Solution:
 ```html
 <svg width="200" height="200">

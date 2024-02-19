@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Use of fit-content for element width</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+<style>
+.fit-content {
+  inline-size: -webkit-fit-content;
+  inline-size: -moz-fit-content;
+  inline-size: fit-content;
+
+  background-color: mediumvioletred;
+  color: white;
+  padding: clamp(0.5rem, 3%, 1rem);
+  border-radius: 0.25rem;
+}
+
+article * + * {
+  margin-top: 1em;
+}
+
+body {
+  --padding: 5vw;
+  --max-width: 80ch;
+}
+
+body > * + * {
+  -webkit-margin-before: min(2rem, 4vh);
+          margin-block-start: min(2rem, 4vh);
+}
+</style>
+  
+</head>
+
+<body translate="no">
+  <article class="card">
+  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab iste sint, esse suscipit facilis rem dignissimos aspernatur! Deserunt, harum accusantium?</p>
+  <p class="fit-content">This paragraph uses fit-content</p>
+  <p>Magnam, eos eum tempora veniam, voluptas dolores tenetur, quasi ipsum asperiores aspernatur velit nobis et. Cum dolores aliquam iusto eveniet?</p>
+  <p>Voluptate possimus ducimus quasi expedita impedit veritatis iure cum, ipsam aut optio consequuntur quia perspiciatis at ab rem, doloremque itaque!</p>
+</article>
+  
+</body>
+
+</html>

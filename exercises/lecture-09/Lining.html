@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Lining Things Up In CSS</title>
+  
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 2rem;
+  background-color: #fcfff5;
+  font-family: system-ui, sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  font-size: 2.5rem;
+}
+
+.container > * {
+  --base-hue: 80;
+  --hue: var(--base-hue);
+  background-color: hsl(var(--hue), 95%, 80%);
+  border: 2px solid hsl(var(--hue), 95%, 35%);
+  color: hsl(var(--hue), 95%, 20%);
+  text-align: center;
+  border-radius: var(--border-radius, 0.5rem);
+}
+.container > *:not(img) {
+  padding: var(--padding, 2rem);
+}
+.container > *:nth-child(5n+2) {
+  --hue: 200;
+}
+.container > *:nth-child(5n+3) {
+  --hue: 260;
+}
+.container > *:nth-child(5n+4) {
+  --hue: 320;
+}
+.container > *:nth-child(5n+5) {
+  --hue: 380;
+}
+
+.inline > * {
+  display: inline;
+}
+
+.inline-block > * {
+  display: inline-block;
+}
+
+.inline-table > * {
+  display: inline-table;
+}
+
+.absolute,
+.fixed {
+  position: relative;
+  height: 5ch;
+}
+
+.absolute > *,
+.fixed > * {
+  position: absolute;
+  top: 0;
+  width: 4ch;
+}
+.absolute > *:nth-child(2),
+.fixed > *:nth-child(2) {
+  left: 4ch;
+}
+.absolute > *:nth-child(3),
+.fixed > *:nth-child(3) {
+  left: 8ch;
+}
+
+.float {
+  display: flow-root;
+}
+
+.float > * {
+  float: left;
+}
+
+.columns {
+  -moz-columns: 3;
+       columns: 3;
+}
+
+.flex {
+  display: flex;
+}
+
+.inline-flex {
+  display: inline-flex;
+}
+
+.inline-grid > * {
+  display: inline-grid;
+}
+
+.grid {
+  display: grid;
+}
+
+.grid-auto-flow {
+  grid-auto-flow: column;
+}
+
+.grid-template-columns {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-template-areas {
+  grid-template-areas: "a b c";
+}
+
+/* demo styles */
+h2 {
+  isolation: isolate;
+}
+
+h2:not(:first-of-type) {
+  margin-top: 3rem;
+}
+
+.container {
+  outline: 2px dashed;
+}
+
+.writing-mode {
+  -ms-writing-mode: tb-lr;
+      writing-mode: vertical-lr;
+}
+</style>
+  
+</head>
+
+<body translate="no">
+  <h2>🙂 inline</h2>
+
+<div class="container inline">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+</div>
+
+<h2>🙂 inline-block</h2>
+<div class="container inline-block">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+</div>
+
+<h2>🥴 inline-table</h2>
+<div class="container inline-table">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+</div>
+
+<h2>😰 absolute</h2>
+<div class="container absolute">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+</div>
+
+<h2>😫 fixed</h2>
+<div class="container fixed">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+</div>
+
+<h2>🤭 float</h2>
+<div class="container float">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+</div>
+
+<h2>😲 columns</h2>
+<div class="container columns">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+</div>
+
+<h2>🤩 flex</h2>
+<div class="container flex">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+</div>
+
+<h2>😎 inline-flex</h2>
+<div class="container inline-flex">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+</div>
+
+<h2>😉 inline-grid</h2>
+<div class="container inline-grid">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+</div>
+
+<h2>🤯 grid-auto-flow: column</h2>
+<div class="container grid grid-auto-flow">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+</div>
+
+<h2>🤗 grid-template-columns</h2>
+<div class="container grid grid-template-columns">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+</div>
+
+<h2>🤓 grid-template-areas</h2>
+<div class="container grid grid-template-areas">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+</div>
+
+<h2>🙃 writing mode</h2>
+<div class="container writing-mode">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+</div>
+  
+  
+</body>
+</html>
