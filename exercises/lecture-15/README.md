@@ -252,7 +252,3 @@ HTML/CSS/JavaScript/ReactJS practice exercises with solutions
         </div>
     </footer>
 ```
-
-## LICENSE
-This repository follows the [MIT License](https://github.com/janusnic/web-dev-exercises-with-solutions/tree/main/LICENSE).
-
