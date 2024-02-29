@@ -4,12 +4,178 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <!-- change the title to: Lesson 2 challenges -->
-    <title>Lesson 15 challenges</title>
+    <title>Lesson 17 challenges</title>
     
 
 </head>
 <body>
 
+<script>
+
+let x = 3
+let y = 4
+let X = 1;
+
+x == 3 //true
+x === "3" //false
+x!=5 //true
+x!== "5" //true
+
+X !== 3 //false
+
+y > 5 //false
+y >= 3 //true
+
+y < 5 //true
+y <= 2 //false
+
+1 == true // true
+null == undefined // true
+NaN == NaN // false
+
+
+// let x = 3;
+// let y = 4;
+
+let z = 5;
+// "Or Or Equals"
+console.log("Or Or Equals: ", x ||= y); // 3
+console.log("Or Or Equals: ", x || (y = z)); // 3
+// x || (y = z);
+
+
+// "And And Equals"
+x &&= y;
+console.log("And And Equals: ", x &&= y); // 4
+x && (y = z);
+console.log("And And Equals: ", x && (y = z)); //5
+
+// "QQ Equals"
+x ??= y;
+console.log("QQ Equals: ", x ??= y); // 4
+x ?? (y = z);
+console.log("QQ Equals: ", x ?? (y = z)); // 4
+
+
+if (x === 3){
+    /**comparison in if conditional
+    is true, so perform some code here**/
+}
+
+// Нижче наведено приклади двох логічних операторів.
+x > 12 && y < 25 // True
+x < 2 && y >12 // False
+
+x > 12 || y > 25 // True
+x < 2 || y < 12 // False
+
+if (x < 45 && 32 > y){
+    /**compound comparison in if conditional
+    is true, so perform some code here**/
+}
+ 
+
+// let day = prompt("Enter week's day");
+// switch (day) {
+//   case "Monday":
+//   case "Понеділок":
+//     alert("Start of the work week!");
+//     break;
+//   case "Friday":
+//   case "П'ятниця":
+//     alert("End of the work week!");
+//     break;
+//   default:
+//     alert("A regular day");
+// }
+
+
+// let day = prompt("Enter week's day");
+
+// if (day == "Monday" || day == "Понеділок") {
+//   alert("Start of the work week!");
+// }
+// else if (day == "Friday" || day == "П'ятниця") {
+//   alert("End of the work week!");
+// }
+// else  {
+//   alert("A regular day");
+// }
+
+
+// const number = 3;
+
+// let guess = prompt("Guess the number")
+// if (+guess > number) {
+//   alert('The number is too long');
+// } else if (+guess < number) {
+//   alert('The number is short');
+// }
+// else {
+//   alert('Congratulations, You did it!');
+// }
+
+let message;
+
+// ступінь
+
+let score = '67';
+
+let grade;
+
+if (score < 50) {
+  grade = 'F';
+} else if (score < 70) {
+  grade = 'D'
+} else if (score < 80) {
+  grade = 'C'
+} else if (score < 90) {
+  grade = 'B'
+} else {
+  grade = 'A'
+}
+
+console.log(grade); // "D"
+
+// In this code block, you test multiple conditions on the score variable to determine the letter grading of the variable.
+
+// These same conditions can be performed using ternary operators as follows:
+
+// let score = '67';
+let grade1 = score < 50 ? 'F'
+  : score < 70 ? 'D'
+  : score < 80 ? 'C'
+  : score < 90 ? 'B'
+  : 'A';
+
+console.log(grade); // "D"
+
+
+// З міркувань безпеки подвійний знак питання не можна використовувати разом із операторами JavaScript АБО (||) та І (&&) без дужок (), що розділяють оператори.
+
+// Наприклад, наведений нижче код намагається перевірити, чи можна використовувати змінну firstName або lastName як значення імені користувача, перш ніж використовувати як значення «Guest»:
+
+// let firstName = "John";
+// let lastName = "Stone";
+// let username = firstName || lastName ?? "Guest";
+// Error: Unexpected token '??'
+
+// console.log(username);
+
+// Помилка під час використання нульового об’єднання з логічним АБО
+
+// Це тому, що JavaScript не зможе визначити, який оператор йому потрібно оцінити першим. Ви повинні використовувати круглі дужки, щоб чітко вказати пріоритетність оцінок.
+
+// Наступний код спочатку обчислить вирази в дужках:
+
+let firstName = null;
+let lastName = undefined;
+let username = (firstName || lastName) ?? "Guest";
+
+console.log(username); // "Guest"
+
+
+</script>
     
 </body>
 </html>
