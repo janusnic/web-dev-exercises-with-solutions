@@ -93,7 +93,7 @@ console.log(str4[str4.length -1]); // "o"
 ## solution:
 ```js
 function lastChar(str) {
-    return str[-1];
+    return str.split(-1);
 }
 
 console.log(lastChar(str4)); // "o"

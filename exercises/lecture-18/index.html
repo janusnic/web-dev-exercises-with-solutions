@@ -11,11 +11,11 @@
 
     
       
-  <script>
+  <script src="main.js">
 
-    function A() { console.log('A was called'); return undefined;}
-    function B() { console.log('B was called'); return false;}
-    function C() { console.log('C was called'); return "foo";}
+    // function A() { console.log('A was called'); return undefined;}
+    // function B() { console.log('B was called'); return false;}
+    // function C() { console.log('C was called'); return "foo";}
     
   // A() ?? C()
   // A()
@@ -33,17 +33,17 @@
 
     
 
-    console.log( A() ?? C() );
+    // console.log( A() ?? C() );
 
-    console.log( B() ?? C() );
+    // console.log( B() ?? C() );
 
-    console.log( B() || C() );
+    // console.log( B() || C() );
 
-    'use strict';
+    // 'use strict';
 
-    let a = 9007199254740991n;
-    let b = 9007199254740991n;
-    console.log(a + b); 
+    // let a = 9007199254740991n;
+    // let b = 9007199254740991n;
+    // console.log(a + b); 
     // Uncaught TypeError: can't convert BigInt to number
   </script>
 

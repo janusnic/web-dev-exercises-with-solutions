@@ -1,0 +1,88 @@
+/* footer */
+/* page-footer */
+.page-footer {
+    --footer-background-color: #555;
+    --footer-social-background-color: #333;
+    --footer-ligal-background-color: #000;
+    --footer-a-font-size: .85rem;
+    --footer-a-color: #eee;
+    --footer-light-color: #fff;
+
+    /* Footer main */
+    > .footer-main {
+        background-color: var(--footer-background-color);
+        padding: 1.25rem 1.875rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+   
+        > .footer-main-item {
+            padding: 1.25rem;
+            min-width: 12.5rem;
+            
+            > ul > li > a {
+                color: var(--footer-a-color);
+                font-size: var(--footer-a-font-size);
+            }
+            > ul > li > a:hover {
+                color: var(--footer-light-color);
+            }
+
+            > ul > li > a:hover::before {
+                content: '\f00c';
+                font-family: 'Font Awesome 5 Free';
+                font-weight: 900;
+                margin-right: 3px;
+                color: var(--footer-light-color);
+            }
+            
+        > .footer-title {
+                color: var(--footer-light-color);
+                /* font-size: 1.375rem; */
+            }
+        }
+      
+    }
+    /* Footer social */
+    > .footer-social{
+        background-color: var(--footer-social-background-color);
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        > .footer-social-list {
+            > li {
+                display: inline-block;
+                > a > i {
+                    margin: 0.5rem;
+                    font-size: 1.25rem;
+                    color: var(--footer-a-color);
+                }
+            }
+        }
+        > .footer-social-list > li> a:hover > i {
+            color: var(--anchor-active-color);
+        }
+    }
+    /* Footer legal */
+    > .footer-ligal {
+        padding: 0.9375rem 1.875rem;
+        background-color: var(--footer-ligal-background-color);
+        > ul.footer-ligal-list {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            > li {
+                margin: 0.125rem 0.625rem;
+                white-space: nowrap;
+            }
+            > li > a {
+                color: var(--footer-light-color);
+            }
+            
+            /* one before the last child */
+            > li:nth-last-child(2) {
+                flex: 1;
+            }
+        }
+    }
+}

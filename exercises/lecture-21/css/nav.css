@@ -1,0 +1,105 @@
+/* nav */
+#toggler {
+    display: none;
+}
+.page-header {
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    
+    
+    padding: 1.5rem 7%;
+    width: 100%;
+
+    /* font-size: clamp(.8rem, 1vw, 1rem); */
+    & .navbar {
+        position: absolute;
+        top: 99.9%;
+        left: 0;
+        right: 0;
+        background: #fff;    
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    & #toggler:checked ~  nav.navbar {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    
+    & .brand {
+        color: var(--anchor-active-color);
+        font-size: 1.1rem;
+        font-weight: bolder;
+    }
+    & .navbar > a{
+        color: var(--anchor-color);
+        margin: 0 1rem;
+        position: relative;
+        transition: all 0.3s;
+        display: block;
+    }
+    & .navbar > a:hover {
+        color: var(--anchor-active-color);
+        background-color: rgb(0 0 0 / .1);
+    }
+    & .navbar a::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0%;
+        border-bottom: 2px solid var(--anchor-active-color);
+        transition: 0.2s;
+    }
+    
+    & .navbar a::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 0%;
+        border-top: 2px solid var(--anchor-active-color);
+        transition: 0.2s;
+    }
+    
+    & .navbar a:hover::after {
+        width: 100%;
+    }
+    & .navbar a:hover::before {
+        width: 100%;
+    }
+    & .toolbar > a {
+        font-size: 1.1rem;
+        margin-left: 1.1rem;
+        color: var(--anchor-color);
+        cursor: pointer;
+    }
+    & .toolbar > a:hover {
+        color: var(--anchor-active-color);
+    }
+}
+
+/* https://devdevout.com/px-to-rem */
+@media (min-width: 50rem) {
+    .page-header {
+        & .navbar {
+            clip-path:none;
+            position:unset;  
+        }
+        & .navbar > a{
+            position: relative;
+            transition: all 0.3s;
+            display: inline-block;
+         }
+    }    
+    .page-header label {
+        display: none;
+    }
+}  
